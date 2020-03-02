@@ -6,6 +6,7 @@
 <hr>
 <p><strong>{{ $todo->body }}</strong></p>
 <hr>
+<a href = "/todo/{{$todo->id}}/edit" class="btn btn-default">Edit</a>
 <form class = "delete_form" action="{{action('TodosController@destroy',$todo->id)}}" method="POST">
 {{ csrf_field() }}
 <input type="hidden" name = "_method" value="DELETE" />

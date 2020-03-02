@@ -39,7 +39,7 @@ class TodosController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+     *primary
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -84,7 +84,8 @@ class TodosController extends Controller
      */
     public function edit($id)
     {
-        
+        $todo = Todo::find($id);
+        return view('todos.edit')->with('todo',$todo);
     }
 
     /**
@@ -96,7 +97,26 @@ class TodosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->title = $request->title;
+        return "Hello";
+
+    }
+
+    public function update_todo(Request $request, $id){
+        $request->validate([
+            'text' => 'required',
+            'body' => 'required',
+            'due' => 'required'
+
+
+        ]);
+        $todo = Todo::find($id);
+        $todo->text = $request->text;
+        $todo->body = $request->body;
+        $todo->due = $request->due;
+        $todo->save();
+        return redirect('todo')->with('success','Todo Updated');
     }
 
     /**
