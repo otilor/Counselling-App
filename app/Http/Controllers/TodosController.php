@@ -97,28 +97,29 @@ class TodosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $todo = Todo::find($id);
-        $todo->title = $request->title;
-        return "Hello";
-
-    }
-
-    public function update_todo(Request $request, $id){
         $request->validate([
             'text' => 'required',
             'body' => 'required',
             'due' => 'required'
-
-
         ]);
         $todo = Todo::find($id);
         $todo->text = $request->text;
         $todo->body = $request->body;
         $todo->due = $request->due;
         $todo->save();
+        
         return redirect('todo')->with('success','Todo Updated');
-    }
 
+    }
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    
+    
     /**
      * Remove the specified resource from storage.
      *
