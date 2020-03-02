@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<a href = "/todo/{{$todo->id}}"><strong><-Go Back</strong></a>
 <form action="{{action('TodosController@update',$todo->id)}}" method = "POST">
     <input type="hidden" name = "_method" value="PATCH" />
     {{ csrf_field() }}
