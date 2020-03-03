@@ -2,6 +2,12 @@
 <head>
     <title>Todolist App</title>
     <link rel = "stylesheet" href = "/css/app.css">
+    <style>
+    @font-face {
+        font-family: myFirstFont;
+        src: url(Raleway-Regular.ttf);
+      }
+    </style>
 </head>
 <body>
         @include('inc.navbar')
