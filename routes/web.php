@@ -32,7 +32,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
-Route::get('/','TodosController@index');
-Route::post('/create/submit', 'TodosController@storeTodo')->name('store_todo');
-//Route::post('/todo/delete', 'TodosController@destroy')->name('delete_todo');
-Route::resource('todo', 'TodosController');
+Route::get('/', function(){
+    return view('index');
+});
