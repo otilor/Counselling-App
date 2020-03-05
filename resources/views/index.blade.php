@@ -181,7 +181,13 @@
                         </div>     
                         <!-- end page title -->
 
-                        
+                        <p>Welcome to AnCounsel</p>
+                        <form>
+                            {{csrf_field()}}
+                            <label for="text">Application Token <span class="fas fa-key "></span> :</label>
+                            <input type="text" name="application_token">
+                            <input class = "btn btn-info" type="submit" name = "submit_application" value="Submit Application">
+                        </form>
                         
 
                         
