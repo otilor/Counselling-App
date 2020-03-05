@@ -180,13 +180,17 @@
                             </div>
                         </div>     
                         <!-- end page title -->
-
-                        <p>Welcome to AnCounsel</p>
-                        <form>
+                        
+                            <h1>Welcome to AnCounsel</h1>
+                            <!-- Change Font later on -->
+                        
+                        <h5 class="alert alert-info">Proceed By Checking your Appointment Status</h5>
+                        <form class="form">
                             {{csrf_field()}}
                             <label for="text">Application Token <span class="fas fa-key "></span> :</label>
-                            <input type="text" name="application_token">
-                            <input class = "btn btn-info" type="submit" name = "submit_application" value="Submit Application">
+                            <input type="text" class="form-control" maxlength="25" name="application_token" id="defaultconfig">
+                            <br>
+                            <input class = "form-control btn btn-info" type="submit" name = "submit_application" value="Check Status">
                         </form>
                         
 
