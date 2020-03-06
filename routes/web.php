@@ -1,5 +1,5 @@
 <?php
-Route::get('/check', 'ApplicationsController@check')->name('check');
 Route::get('/verify', 'ApplicationsController@check_token')->name('verify');
-Route::get('/','ApplicationsController@index');
+Route::get('/','ApplicationsController@index')->name('check');
+Route::get('/status','ApplicationsController@show_status');
 ?>
