@@ -1,1 +1,0 @@
-<p>These are your application details</p>
