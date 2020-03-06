@@ -139,8 +139,15 @@
 
                             <li>
                                 <a href="" class="waves-effect">
-                                    <i class="mdi mdi-view-dashboard"></i><span class="badge badge-pill badge-success float-right">3</span>
+                                    <i class="mdi mdi-view-dashboard"></i>
                                     <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span>Book an Appointment</span>
                                 </a>
                             </li>
 
