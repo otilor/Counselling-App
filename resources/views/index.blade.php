@@ -145,7 +145,7 @@
                             </li>
 
                             <li>
-                                <a href="/book" class="waves-effect">
+                                <a href="/check" class="waves-effect">
                                     <i class="mdi mdi-calendar-blank-multiple "></i>
                                     <span>Book an Appointment</span>
                                 </a>
