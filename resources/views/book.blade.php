@@ -14,7 +14,7 @@
             <!-- end row -->
 
             <div class="row justify-content-center">
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body p-4">
                             <div class="p-2">
@@ -26,16 +26,18 @@
                                         <div class="col-md-12">
                                             
                                             <div class="form-group mb-4">
-                                                <label for="userpassword"><i class="mdi mdi-lock"></i> Application Token</label>
-                                                <input name = "token" maxlength = "6" class="form-control" id="userpassword" placeholder="Enter Token">
+                                                    <label for="appointment_date"><i class="mdi mdi-calendar-blank-multiple"></i> Appointment Date</label>
+                                                    <input class="form-control" name="appointment_date" type = "date">
+                                                <label for="userpassword"><i class="mdi mdi-message-text-lock-outline"></i> Personal Message</label>
+                                                <textarea id="textarea" class="form-control" maxlength="225" rows="5" placeholder="Drop a personal message with the Counsellor(s) maximum of 255 char"></textarea>
                                             </div>
 
                                             
                                             <div class="mt-4">
-                                                <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Check Appointment</button>
+                                                <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Book Appointment</button>
                                             </div>
                                             <div class="mt-4 text-center">
-                                                <a href="/book" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i> Book an Appointment?</a>
+                                                <a href="/" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i>Have an Appointment?</a>
                                             </div>
                                         </div>
                                     </div>
