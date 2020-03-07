@@ -14,11 +14,12 @@ class Application extends Migration
     public function up()
     {
         Schema::create('applications', function (Blueprint $table){
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('application_token');
-            $table->string('applicant');
-            $table->string('application_status');
-            
+            $table->string('applicant')->comment('This is the applicat who applied');
+            $table->mediumText('applicant_message');
+            $table->char('application_status')->default('0');
+            $table->timestamps();
         });
     }
 

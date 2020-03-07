@@ -32,4 +32,13 @@ class ApplicationsController extends Controller
     public function book(){
         return view('book');
     }
+    public function book_appointment(Request $request){
+        $message = $request->personal_message;
+
+        $request->validate([
+            'appointment_date' => 'required|date',
+            'personal_message' => 'required|max:255'
+        ]);
+        
+    }
 }
