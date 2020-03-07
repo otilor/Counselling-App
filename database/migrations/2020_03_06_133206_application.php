@@ -18,7 +18,7 @@ class Application extends Migration
             $table->string('application_token');
             $table->string('appointment_date');
             $table->mediumText('personal_message');
-            $table->char('application_status')->default('0');
+            $table->int('application_status')->default(0);
             $table->timestamps();
         });
     }

@@ -60,12 +60,7 @@
                         </button>
 
                         <!-- App Search-->
-                        <form class="app-search d-none d-lg-block">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="mdi mdi-magnify"></span>
-                            </div>
-                        </form>
+                        
                     </div>
 
                     <div class="d-flex">
@@ -194,6 +189,13 @@
                             <div class="border border-primary">
                             <h3 class="text-center">Application Date: {{$applications->appointment_date}}</h3>
                             <h3 class="text-center">Personal Message: {{$applications->personal_message}}</h3>
+                            @if($applications->application_status == 0)
+                            <h3 class="text-center text-warning">Application Status: Pending</h3>
+                            @elseif($applications->application_status  == 1)
+                            <h3 class="text-center text-success">Application Status: Accepted</h3>
+                            @else
+                            <h3 class="text-center text-danger">Application Status: Rejected</h3>
+                            @endif
                             </div>
                             <!-- Change Font later on -->
                         
