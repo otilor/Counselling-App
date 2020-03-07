@@ -188,7 +188,10 @@
                         </div>     
                         <!-- end page title -->
                         
-                            <h1>Welcome to AnCounsel</h1>
+                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace"><strong>Application Details</strong></h1>
+                            <div class="row">
+                            <hr>
+                            </div>
                             <!-- Change Font later on -->
                         
                         

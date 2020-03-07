@@ -20,14 +20,14 @@
                             <div class="p-2">
                                 <h5 class="mb-5 text-center">View your Application Status</h5>
                                 @include('messages')
-                            <form class="form-horizontal" action="{{ route('verify')}}" method="GET">
+                            <form class="form-horizontal" name = "input_token" action="{{ route('verify')}}" method="GET">
 
                                     <div class="row">
                                         <div class="col-md-12">
                                             
                                             <div class="form-group mb-4">
                                                 <label for="userpassword"><i class="mdi mdi-lock"></i> Application Token</label>
-                                                <input name = "token" maxlength = "10" class="form-control" id="userpassword" placeholder="Enter Token">
+                                                <input name = "token" maxlength = "6" class="form-control" id="userpassword" placeholder="Enter Token">
                                             </div>
 
                                             
@@ -48,5 +48,7 @@
             <!-- end row -->
         </div>
     </div>
-
+<script>
+    document.input_token.token.focus();
+</script>
 @endsection
