@@ -42,7 +42,7 @@ class ApplicationsController extends Controller
         $application = new Applications;
         $application->appointment_date = $request->appointment_date;
         $application->personal_message = $request->personal_message;
-        $application->application_token = str_random(6);;
+        $application->application_token = str_random(8);;
         $application->save();
         return redirect('/')->with('success','Use this token: '.$application->application_token);
     }

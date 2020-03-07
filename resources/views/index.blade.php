@@ -27,7 +27,7 @@
                                             
                                             <div class="form-group mb-4">
                                                 <label for="userpassword"><i class="mdi mdi-lock"></i> Application Token</label>
-                                                <input name = "token" maxlength = "6" class="form-control" id="userpassword" placeholder="Enter Token">
+                                                <input name = "token" maxlength = "8" class="form-control" id="userpassword" placeholder="Enter Token">
                                             </div>
 
                                             
