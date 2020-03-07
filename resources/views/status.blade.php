@@ -189,8 +189,11 @@
                         <!-- end page title -->
                         
                             <h1 class="text-center" style="font-family:'Courier New', Courier, monospace"><strong>Application Details</strong></h1>
-                            <div class="row">
+                            
                             <hr>
+                            <div class="border border-primary">
+                            <h3 class="text-center">Application Date: {{$applications->appointment_date}}</h3>
+                            <h3 class="text-center">Personal Message: {{$applications->personal_message}}</h3>
                             </div>
                             <!-- Change Font later on -->
                         

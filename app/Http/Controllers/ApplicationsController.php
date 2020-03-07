@@ -26,7 +26,7 @@ class ApplicationsController extends Controller
         if(!$applications){
             return redirect()->route('check')->with('error','No Application attached found for this token'.$applications);
         }
-        return view('status');
+        return view('status', compact('applications',$applications));
         
     }
     public function book(){
