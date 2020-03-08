@@ -196,7 +196,7 @@
                             @else
                             <h3 class="text-center text-danger">Application Status: Rejected</h3>
                             @endif
-                            <h6 class="text-center alert alert-info">Your Application Code: {{$applications->application_token}}</h6>
+                            <h6 class="text-center alert alert-info">Your Application Token: {{$applications->application_token}}</h6>
                             </div>
                             <!-- Change Font later on -->
                         
