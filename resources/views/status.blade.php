@@ -140,7 +140,7 @@
                             </li>
 
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="/book" class="waves-effect">
                                     <i class="mdi mdi-calendar-blank-multiple "></i>
                                     <span>Book an Appointment</span>
                                 </a>
@@ -183,7 +183,7 @@
                         </div>     
                         <!-- end page title -->
                         
-                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace"><strong>Application Details</strong></h1>
+                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Application Details</strong></h1>
                             
                             <hr>
                             <div class="border border-primary">
@@ -196,6 +196,7 @@
                             @else
                             <h3 class="text-center text-danger">Application Status: Rejected</h3>
                             @endif
+                            <h6 class="text-center alert alert-info">Your Application Code: {{$applications->application_token}}</h6>
                             </div>
                             <!-- Change Font later on -->
                         

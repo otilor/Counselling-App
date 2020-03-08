@@ -18,7 +18,7 @@ class ApplicationsController extends Controller
     public function check_token(Request $request){
        
         $request->validate([
-            'token'=>'required|max:6'
+            'token'=>'required|max:8'
         ]);
         $token = $request->get('token');
         
