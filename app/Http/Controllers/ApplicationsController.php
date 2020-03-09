@@ -24,7 +24,7 @@ class ApplicationsController extends Controller
         
         $applications = Applications::where('application_token',$token)->first();
         if(!$applications){
-            return redirect()->route('check')->with('error','No Application attached found for this token'.$applications);
+            return redirect()->route('check')->with('error','No Application attached to this token'.$applications);
         }
         return view('status', compact('applications',$applications));
         
