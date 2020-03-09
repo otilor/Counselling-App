@@ -1,6 +1,4 @@
-@extends('layouts.mainapp')
-
-    
+@extends('layouts.app')
 @section('content')
 <p>You are {{ Auth::user()->email }}</p>
 <p>Welcome</p>
