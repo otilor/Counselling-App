@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.mainapp')
 @section('content')
 
 <div class="account-pages my-5 pt-5">
