@@ -39,9 +39,7 @@
                                             <div class="mt-4">
                                                 <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Login</button>
                                             </div>
-                                            <div class="mt-4 text-center">
-                                                <a href="/register" class="text-muted"><i class="mdi mdi-face "></i> Admin Register</a>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </form>
