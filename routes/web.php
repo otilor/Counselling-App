@@ -7,7 +7,6 @@ Route::post('/book','ApplicationsController@book_appointment')->name('book_appoi
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','HomeController@admin_index');
-
 ?>
 
 
