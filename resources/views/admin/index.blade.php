@@ -4,8 +4,9 @@
 <p>Welcome</p>
 <form action = "{{ route('logout') }}" method="POST">
 {{ csrf_field() }}
-<div class="btn btn-danger">
+<div>
 <input type="submit" value="Logout" class="btn btn-danger">
 </div>
 </form>
+<p>There are {{ count($applications) }} Applications</p>
 @endsection
