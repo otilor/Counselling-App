@@ -1,32 +1,5 @@
-<!doctype html>
-<html lang="en">
-
-    <head>
-        <meta charset="utf-8" />
-        <title>Dashboard | AnCounsel</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesdesign" name="author" />
-        <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
-
-        <!-- slick css -->
-        <link href="assets/libs/slick-slider/slick/slick.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/slick-slider/slick/slick-theme.css" rel="stylesheet" type="text/css" />
-
-        <!-- jvectormap -->
-        <link href="assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
-
-        <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-        <!-- App Css-->
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
-
-    </head>
-
-    <body data-sidebar="dark">
+@extends('layouts.status_app')
+@section('content')
 
         <!-- Begin page -->
         <div id="layout-wrapper">
@@ -98,23 +71,13 @@
 
                         
 
-                        <div class="dropdown d-inline-block">
-                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
-                                    alt="Header Avatar">
-                                <span class="d-none d-sm-inline-block ml-1">Gabriel</span>
-                                <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                        <div class="dropdown d-none d-lg-inline-block ml-1">
+                            <a href="/">
+                            <button type="button" class="btn header-item noti-icon waves-effect">
+                            
+                                <i class="mdi mdi-home"></i>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <!-- item-->
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/"><i class="mdi mdi-logout font-size-16 align-middle mr-1"></i> Logout</a>
-                            </div>
+                            </a>
                         </div>
             
                     </div>
@@ -135,7 +98,7 @@
                             <li>
                                 <a href="" class="waves-effect">
                                     <i class="mdi mdi-view-dashboard"></i>
-                                    <span>Dashboard</span>
+                                    <span>Application Details</span>
                                 </a>
                             </li>
 
@@ -442,24 +405,5 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
-
-        <!-- apexcharts -->
-        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-        <script src="assets/libs/slick-slider/slick/slick.min.js"></script>
-
-        <!-- Jq vector map -->
-        <script src="assets/libs/jqvmap/jquery.vmap.min.js"></script>
-        <script src="assets/libs/jqvmap/maps/jquery.vmap.usa.js"></script>
-
-        <script src="assets/js/pages/dashboard.init.js"></script>
-
-        <script src="assets/js/app.js"></script>
-
-    </body>
-</html>
+        @endsection
+        
