@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Applications;
+use App\Application;
 
 
 class adminController extends Controller
@@ -14,7 +14,7 @@ class adminController extends Controller
     }
     public function admin_index()
     {
-        $applications = Applications::all();
+        $applications = Application::all();
         return view('admin.index')->with('applications',$applications);
     }
 }
