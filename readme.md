@@ -3,7 +3,7 @@
 <img src = "https://i.ibb.co/9WZd5p8/Screenshot-from-2020-03-11-15-21-08.png">
 
 ## About AnCounsel
-AnCounsel is a web Application crafted by Gabriel Akinyosoye(https://github.com/GabielFemi) for Anchor University, Lagos (https://aul.edu.ng)
+AnCounsel is a web Application crafted by [Gabriel Akinyosoye](https://github.com/GabielFemi) for [Anchor University, Lagos ](https://aul.edu.ng)
 
 - Quickly book an appointment with a counsellor.
 - Review appointment.
