@@ -228,6 +228,7 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            {{ $applications->links() }}
                             
                             <h1>That's all for now!<i class="mdi mdi-checkbox-marked-circle-outline display-4 text-success"></i></h1>
                         </div>

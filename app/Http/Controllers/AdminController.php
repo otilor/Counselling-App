@@ -14,7 +14,7 @@ class AdminController extends Controller
     }
     public function admin_index()
     {
-        $applications = Application::all();
-        return view('admin.index')->with('applications',$applications);
+        $applications = Application::paginate(5);
+        return view('admin.index', compact('applications', $applications));
     }
 }
