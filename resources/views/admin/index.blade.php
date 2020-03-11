@@ -152,6 +152,14 @@
                             <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Admin Dashboard</strong></h1>
                             
                             <hr>
+                    <h3>There are currently {{ count($applications) }} applications for you to review</h3>
+                    @foreach($applications as $application)
+                    <div>
+                    <p class="badge badge-warning"><strong>{{$application->appointment_date}}</strong></p>
+                    <p>{{ $application->personal_message }}</p>
+                    <br>
+                    </div>
+                    @endforeach
                             
                             <!-- Change Font later on -->
                         
@@ -186,215 +194,11 @@
         <!-- END layout-wrapper -->
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
-            <div data-simplebar class="h-100">
-    
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs nav-tabs-custom rightbar-nav-tab nav-justified" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link py-3 active" data-toggle="tab" href="#chat-tab" role="tab">
-                            <i class="mdi mdi-message-text font-size-22"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-3" data-toggle="tab" href="#tasks-tab" role="tab">
-                            <i class="mdi mdi-format-list-checkbox font-size-22"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link py-3" data-toggle="tab" href="#settings-tab" role="tab">
-                            <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                            <i class="mdi mdi-settings font-size-22"></i>
-                        </a>
-                    </li>
-                </ul>
-
-                <!-- Tab panes -->
-                <div class="tab-content text-muted">
-                    <div class="tab-pane active" id="chat-tab" role="tabpanel">
-                
-                        <form class="search-bar py-4 px-3">
-                            <div class="position-relative">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="mdi mdi-magnify"></span>
-                            </div>
-                        </form>
-
-                        <h6 class="font-weight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
-
-                        <div class="p-2">
-                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
-                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-success"></i>
-                                <span class="mb-0 mt-1">App Development</span>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
-                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-warning"></i>
-                                <span class="mb-0 mt-1">Office Work</span>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
-                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1 text-danger"></i>
-                                <span class="mb-0 mt-1">Personal Group</span>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item pl-3 d-block">
-                                <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i>
-                                <span class="mb-0 mt-1">Freelance</span>
-                            </a>
-                        </div>
-
-                        <h6 class="font-weight-medium px-4 mt-4 text-uppercase">Favourites</h6>
-
-                        <div class="p-2">
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status online"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Andrew Mackie</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">It will seem like simplified English.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status away"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Rory Dalyell</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">To an English person, it will seem like simplified</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status busy"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Jaxon Dunhill</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">To achieve this, it would be necessary.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <h6 class="font-weight-medium px-4 mt-4 text-uppercase">Other Chats</h6>
-
-                        <div class="p-2 pb-4">
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status online"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Jackson Therry</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">Everyone realizes why a new common language.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status away"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Charles Deakin</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">The languages only differ in their grammar.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status online"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Ryan Salting</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">If several languages coalesce the grammar of the resulting.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status online"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Sean Howse</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">It will seem like simplified English.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status busy"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Dean Coward</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">The new common language will be more simple.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="media">
-                                    <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
-                                        <i class="mdi mdi-circle user-status away"></i>
-                                    </div>
-                                    <div class="media-body overflow-hidden">
-                                        <h6 class="mt-0 mb-1">Hayley East</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-0 text-truncate">One could refuse to pay expensive translators.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
-                     <!-- end slimscroll-menu-->
-        </div>
+        
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
-        <div class="rightbar-overlay"></div>
+        
 
         <!-- JAVASCRIPT -->
         @endsection

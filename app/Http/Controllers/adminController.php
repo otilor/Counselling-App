@@ -10,8 +10,9 @@ class adminController extends Controller
 {
     public function admin_index()
     {
-        $applications = Applications::orderBy('created_at','desc')->get();
+        $applications = Applications::orderBy('appoinment_date')->get();
         return view('admin.index')->with('applications',$applications);
+        
     
     }
 }
