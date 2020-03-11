@@ -26,12 +26,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function admin_index()
-    {
-        $applications = Applications::orderBy('created_at','desc')->get();
-        return view('admin.index')->with('applications',$applications);
     
-    }
     
     
 }

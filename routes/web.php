@@ -6,7 +6,7 @@ Route::get('/book','ApplicationsController@book');
 Route::post('/book','ApplicationsController@book_appointment')->name('book_appointment');
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin','HomeController@admin_index');
+Route::get('/admin','adminController@admin_index');
 ?>
 
 

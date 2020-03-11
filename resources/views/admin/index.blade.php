@@ -140,7 +140,7 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">AnCounsel</a></li>
-                                            <li class="breadcrumb-item active">Dashboard</li>
+                                            <li class="breadcrumb-item active">Admin Dashboard</li>
                                         </ol>
                                     </div>
                                     
@@ -153,13 +153,46 @@
                             
                             <hr>
                     <h3>There are currently {{ count($applications) }} applications for you to review</h3>
-                    @foreach($applications as $application)
-                    <div>
-                    <p class="badge badge-warning"><strong>{{$application->appointment_date}}</strong></p>
-                    <p>{{ $application->personal_message }}</p>
-                    <br>
+                    
+
+                    <div class="card-body">
+                        <h4 class="header-title">Here you go!</h4>
+                        <p class="card-title-desc">Very soon you will be able to take actions on the <code>Application status</code>.
+                        </p>    
+                        
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Appointment date</th>
+                                        <th>Personal message</th>
+                                        <th>Status</th>
+                                    </tr>
+
+                                </thead>
+                                <tbody>
+                                    @foreach($applications as $application)
+                                    <tr>
+                                    <th scope="row">{{ $application->id }}</th>
+                                    <td>{{ $application->appointment_date }}</td>
+                                    <td>{{ str_limit($application->personal_message, 25) }}</td>
+                                    @if($application->application_status == 0)
+                                    <td class="badge badge-warning">Pending</td>
+                                    @elseif($application->application_status == 1)
+                                    <td class="badge badge-success">Accepted</td>
+                                    @else
+                                    <td class="badge badge-danger">Rejected</td>
+                                    @endif
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    @endforeach
+                
                             
                             <!-- Change Font later on -->
                         
