@@ -1,12 +1,12 @@
 <?php
-Route::get('/verify', 'ApplicationsController@check_token')->name('verify');
-Route::get('/','ApplicationsController@index')->name('check');
-Route::get('/status','ApplicationsController@show_status');
-Route::get('/book','ApplicationsController@book');
-Route::post('/book','ApplicationsController@book_appointment')->name('book_appointment');
+Route::get('/verify', 'ApplicationController@check_token')->name('verify');
+Route::get('/','ApplicationController@index')->name('check');
+Route::get('/status','ApplicationController@show_status');
+Route::get('/book','ApplicationController@book');
+Route::post('/book','ApplicationController@book_appointment')->name('book_appointment');
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin','adminController@admin_index');
+Route::get('/admin','AdminController@admin_index');
 ?>
 
 
