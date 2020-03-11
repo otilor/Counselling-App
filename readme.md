@@ -9,7 +9,7 @@ AnCounsel is a web Application crafted by [Gabriel Akinyosoye](https://github.co
 - Review appointment.
 - Admin dashboard for managing appointments
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+
 
 ## How to use AnCounsel
 
