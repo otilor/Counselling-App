@@ -107,8 +107,8 @@
 
                             <li>
                                 <a href="#" class="waves-effect">
-                                    <i class="mdi mdi-calendar-blank-multiple "></i>
-                                    <span>View Appointments</span>
+                                    <i class="mdi mdi-face-profile"></i>
+                                    <span>Profile</span>
                                 </a>
                             </li>
                             <li>
@@ -179,8 +179,8 @@
                                     
                                     <tr>
                                         <th>#</th>
-                                        <th>Appointment date</th>
-                                        <th>Personal message</th>
+                                        <th>Appointment date <i class="mdi mdi-calendar"></i></th>
+                                        <th>Personal message <i class="mdi mdi-message-text-lock-outline "></i></th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
