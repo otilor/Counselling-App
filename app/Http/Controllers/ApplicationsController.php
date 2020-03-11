@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use\App\Applications;
+use\App\Application;
 
 class ApplicationsController extends Controller
 {
@@ -22,7 +22,7 @@ class ApplicationsController extends Controller
         ]);
         $token = $request->get('token');
         
-        $applications = Applications::where('application_token',$token)->first();
+        $applications = Application::where('application_token',$token)->first();
         if(!$applications){
             return redirect()->route('check')->with('error','No Application attached to this token'.$applications);
         }
@@ -39,7 +39,7 @@ class ApplicationsController extends Controller
             'appointment_date' => 'required|date',
             'personal_message' => 'required|max:255'
         ]);
-        $application = new Applications;
+        $application = new Application;
         $application->appointment_date = $request->appointment_date;
         $application->personal_message = $request->personal_message;
         $application->application_token = str_random(8);
