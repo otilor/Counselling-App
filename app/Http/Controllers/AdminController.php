@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Application;
 
 
-class adminController extends Controller
+class AdminController extends Controller
 {
     public function __construct()
     {
