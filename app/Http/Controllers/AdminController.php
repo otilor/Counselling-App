@@ -17,4 +17,5 @@ class AdminController extends Controller
         $applications = Application::paginate(5);
         return view('admin.index', compact('applications', $applications));
     }
+    
 }

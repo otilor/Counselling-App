@@ -173,7 +173,7 @@
                         <p class="card-title-desc">Very soon you will be able to take actions on the <code>Application status</code>.
                         </p>    
                         
-                        <div class="table-responsive">
+                        <div class="table-responsive" id = "table_data">
                             <table class="table mb-0">
                                 <thead>
                                     
@@ -228,7 +228,10 @@
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{ $applications->links() }}
+                            
+                                {{ $applications->links() }}
+                            
+                            
                             
                             <h1>That's all for now!<i class="mdi mdi-checkbox-marked-circle-outline display-4 text-success"></i></h1>
                         </div>
@@ -276,6 +279,27 @@
         
 
         <!-- JAVASCRIPT -->
-        
+        <script>
+            $(document).ready(function(){
+
+                $(document).on('click', '.applications a', function(event){
+                    event.preventDefault();
+                    var page = $(this).attr('href').split('page=')[1];
+                    fetch_data(page);
+                });
+
+                function fetch_data(page)
+                {
+                    $.ajax({
+                        url:'/admin?page='+page,
+                        success:function(data)
+                        {
+                            $('#table_data').html(data);
+                        }
+                    })
+                }
+
+            });
+        </script>
         @endsection
         
