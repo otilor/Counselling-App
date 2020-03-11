@@ -112,17 +112,17 @@
                                 </a>
                             </li>
                             <li>
-                            <a href ="javascript:document.admin_form.submit();" class="waves-effect">
                             <form method="POST" action="{{ route('logout') }}" name="admin_form">
-                                {{ csrf_field() }}
+                                <!--Using JavaScript instead of default submit button to submit-->
+                                <a href ="javascript:document.admin_form.submit();" class="waves-effect">
                                 
-                                    <i class="mdi mdi-logout">
-                                        <span>Logout</span>
-                                    </i>
-                                
-                                </form>
-                            </a>
-                                
+                                    {{ csrf_field() }}
+                                    
+                                        <i class="mdi mdi-logout"></i>
+                                            <span>Logout</span>
+
+                                </a>
+                            </form>
                             </li>
 
                             
