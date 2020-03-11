@@ -111,6 +111,18 @@
                                     <span>View Appointments</span>
                                 </a>
                             </li>
+                            <li>
+                                
+                            <form method="POST" action="{{ route('logout') }}">
+                                {{ csrf_field() }}
+                                
+                                    <i class="mdi mdi-logout">
+                                        <input type="submit">
+                                    </i>
+                                
+                                </form>
+                                
+                            </li>
 
                             
 
