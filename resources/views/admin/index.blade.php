@@ -112,15 +112,16 @@
                                 </a>
                             </li>
                             <li>
-                                
-                            <form method="POST" action="{{ route('logout') }}">
+                            <a href ="javascript:document.admin_form.submit();" class="waves-effect">
+                            <form method="POST" action="{{ route('logout') }}" name="admin_form">
                                 {{ csrf_field() }}
                                 
                                     <i class="mdi mdi-logout">
-                                        <input type="submit">
+                                        <span>Logout</span>
                                     </i>
                                 
                                 </form>
+                            </a>
                                 
                             </li>
 
@@ -192,17 +193,36 @@
                                     <td>{{ $application->appointment_date }}</td>
                                     <td>{{ str_limit($application->personal_message, 25) }}</td>
                                     @if($application->application_status == 0)
-                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-alert-outline display-5 text-danger"></i></a></td>
-                                    <td><a style = "color:#505d69" href=""><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-success">Approve</i><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-danger">Reject</i></a></td>
+                                    <td>
+                                        <a style = "color:#505d69" href=""><i class="mdi mdi-alert-outline display-5 text-danger"></i></a>
+                                    </td>
+                                    <td>
+                                        
+                                        <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
+                                        <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
+                                    
+                                    </td>
                                     
                                     
                                     @elseif($application->application_status == 1)
-                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i></a></td>
-                                    <td><a style = "color:#505d69" href=""><strong><i class="btn btn-light mdi mdi-close display-5 text-danger">Cancel</i></strong></a></td>
+                                    <td>
+                                        <i class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i>
+                                    </td>
+                                    
+                                    
+                                    <td>
+                                        <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
+                                    </td>
+                                
                                     
                                     @else
-                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-close display-5 text-danger"></i></a></td>
-                                    <td><a style = "color:#505d69" href=""><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-success">Approve</i></a></td>
+                                    <td>
+                                        <i class="mdi mdi-close display-5 text-danger"></i>
+                                    </td>
+                                    
+                                    <td>
+                                    <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
+                                    </td>
                                     @endif
                                     </tr>
                                     @endforeach
@@ -255,5 +275,6 @@
         
 
         <!-- JAVASCRIPT -->
+        
         @endsection
         

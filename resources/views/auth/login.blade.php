@@ -13,14 +13,14 @@
                             <div class="p-2">
                                 <h5 class="mb-5 text-center">Login to your Account</h5>
                                 
-                            <form class="form-horizontal" name = "input_token" action="{{ route('login')}}" method="POST">
+                            <form class="form-horizontal" name = "login_form" action="{{ route('login')}}" method="POST">
                                     {{ csrf_field() }}
                                     <div class="row">
                                         <div class="col-md-12">
                                             <!--Account Username-->
                                             <div class="form-group mb-4">
                                                 <label for="userpassword"><i class="mdi mdi-email-multiple"></i> Account email</label>
-                                                <input name = "email" class="form-control" id="userpassword" type = "email" placeholder="Enter Email address" required = "">
+                                            <input name = "email" class="form-control" id="userpassword" type = "email" placeholder="Enter Email address" value = "{{ old('email') }}" required = "">
                                                 @if($errors->has('email'))
                                                 <strong>{{ $errors->first('email') }}</strong>
                                                 @endif
@@ -52,6 +52,6 @@
         </div>
     </div>
 <script>
-    document.input_token.token.focus();
+    document.login_form.email.focus();
 </script>
 @endsection
