@@ -169,6 +169,7 @@
                                         <th>Appointment date</th>
                                         <th>Personal message</th>
                                         <th>Status</th>
+                                        <th>Action</th>
                                     </tr>
 
                                 </thead>
@@ -179,16 +180,24 @@
                                     <td>{{ $application->appointment_date }}</td>
                                     <td>{{ str_limit($application->personal_message, 25) }}</td>
                                     @if($application->application_status == 0)
-                                    <td class="badge badge-warning">Pending</td>
+                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-alert-outline display-5 text-danger"></i></a></td>
+                                    <td><a style = "color:#505d69" href=""><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-success">Approve</i><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-danger">Reject</i></a></td>
+                                    
+                                    
                                     @elseif($application->application_status == 1)
-                                    <td class="badge badge-success">Accepted</td>
+                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i></a></td>
+                                    <td><a style = "color:#505d69" href=""><strong><i class="btn btn-light mdi mdi-close display-5 text-danger">Cancel</i></strong></a></td>
+                                    
                                     @else
-                                    <td class="badge badge-danger">Rejected</td>
+                                    <td><a style = "color:#505d69" href=""><i class="mdi mdi-close display-5 text-danger"></i></a></td>
+                                    <td><a style = "color:#505d69" href=""><i class="btn btn-light mdi mdi-checkbox-marked-circle-outline display-5 text-success display-5 text-success">Approve</i></a></td>
                                     @endif
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                            
+                            <h1>That's all for now!<i class="mdi mdi-checkbox-marked-circle-outline display-4 text-success"></i></h1>
                         </div>
 
                     </div>
