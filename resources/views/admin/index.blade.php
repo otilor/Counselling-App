@@ -11,19 +11,19 @@
                         <div class="navbar-brand-box">
                             <a href="" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm-dark.png" alt="" height="22">
+                                    <img src="/assets/images/logo-sm-dark.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="20">
+                                    <img src="/assets/images/logo-dark.png" alt="" height="20">
                                 </span>
                             </a>
 
                             <a href="" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm-light.png" alt="" height="22">
+                                    <img src="/assets/images/logo-sm-light.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="20">
+                                    <img src="/assets/images/logo-light.png" alt="" height="20">
                                 </span>
                             </a>
                         </div>
@@ -106,7 +106,7 @@
                             </li>
 
                             <li>
-                                <a href="/profile" class="waves-effect">
+                                <a href="/admin/create" class="waves-effect">
                                     <i class="mdi mdi-face-profile"></i>
                                     <span>Profile</span>
                                 </a>
@@ -199,10 +199,18 @@
                                         <i data-toggle="tooltip" data-placement="top" title="" data-original-title="Pending" class="mdi mdi-alert-outline display-5 text-danger"></i>
                                     </td>
                                     <td>
+                                    <form action="" method="POST">
+                                        {{ csrf_field() }}
+
+                                        <input type="hidden" name = "application_status" value="1">
+                                        <button type="submit" class="btn btn-outline-success btn-sm">Approve</button>
+                                        </form>
+
+                                        <form>
+                                        <input type="hidden" value = "2">
                                         
-                                        <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
-                                    
+                                        <button type="submit" class="btn btn-outline-danger btn-sm">Reject</button>
+                                        </form>
                                     </td>
                                     
                                     
