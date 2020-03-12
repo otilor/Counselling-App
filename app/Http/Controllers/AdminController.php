@@ -19,7 +19,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $applications = Application::paginate(10);
+        $applications = Application::all();
         return view('admin.index', compact('applications', $applications));
     }
 
