@@ -36,6 +36,7 @@ class AdminController extends Controller
         $new_admin_account->email = $request->email;
         $new_admin_account->name = $request->name;
         $new_admin_account->password = bcrypt($request->password);
+        $new_admin_account->remember_token = sha1($request->_token);
         $new_admin_account->save();
         return redirect('/profile')->with('success','Admin Account Created');
     }

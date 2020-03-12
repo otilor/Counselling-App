@@ -162,7 +162,7 @@
                         </div>     
                         <!-- end page title -->
                         
-                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Creat Admin Profile</strong></h1>
+                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Create Admin Profile</strong></h1>
                             
                             <hr>
                     
