@@ -162,23 +162,35 @@
                         </div>     
                         <!-- end page title -->
                         
-                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Admin Profile</strong></h1>
+                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Creat Admin Profile</strong></h1>
                             
                             <hr>
                     
                     
 
-                            <h1>Edit your profile</h1>
+                            
                             <hr>    
                             <form method="POST">
                                 @include('inc.messages')
                             {{ csrf_field() }}
-                            <label>Enter your username:</label>
-                            <input class="form-control" type="text" value="{{old('admin_username')}}" name= "admin_username" id="example-week-input">
+                            <label>Enter email:</label>
+                            <input class="form-control" type="email" value="{{old('email')}}" name= "email">
+                            <br>
+
+                            <label>Enter name:</label>
+                            <input class="form-control" type="text" value="{{old('name')}}" name= "name">
+                            <br>
+
+                            <label>Enter Password:</label>
+                            <input class="form-control" type="password" value="{{old('password')}}" name= "password">
+                            <br>
+
+                            <label>Confirm Password:</label>
+                            <input class="form-control" type="password" value="{{old('confirm_password')}}" name= "password_confirmation">
                             <br>
                             
                             
-                            <button type="submit" class="col-1 btn btn-primary waves-effect waves-light text-center">Submit</button>
+                            <button type="submit" class="col-2 btn btn-primary waves-effect waves-light text-center">Create Account</button>
                             
 
                             </form>
