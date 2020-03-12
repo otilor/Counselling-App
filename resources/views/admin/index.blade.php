@@ -183,6 +183,7 @@
                                         <th>Personal message <i class="mdi mdi-message-text-lock-outline "></i></th>
                                         <th>Status</th>
                                         <th>Action</th>
+                                        <th>Key</th>
                                     </tr>
 
                                 </thead>
@@ -195,7 +196,7 @@
                                     @if($application->application_status == 0)
                                     <td>
                                         
-                                        <a style = "color:#505d69"><i class="mdi mdi-alert-outline display-5 text-danger"></i></a>
+                                        <i data-toggle="tooltip" data-placement="top" title="" data-original-title="Pending" class="mdi mdi-alert-outline display-5 text-danger"></i>
                                     </td>
                                     <td>
                                         
@@ -207,26 +208,29 @@
                                     
                                     @elseif($application->application_status == 1)
                                     <td>
-                                        <i class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i>
+                                        <i data-toggle="tooltip" data-placement="top" title="" data-original-title="Accepted" class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i>
+                                        
                                     </td>
                                     
                                     
                                     <td>
                                         <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
-                                    </td>
+                                    </td>0
                                 
                                     
                                     @else
                                     <td>
-                                        <i class="mdi mdi-close display-5 text-danger"></i>
+                                        <i  data-toggle="tooltip" data-placement="top" title="" data-original-title="Rejected" class="mdi mdi-close display-5 text-danger"></i>
                                     </td>
                                     
                                     <td>
                                     <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
                                     </td>
                                     @endif
+                                <td>{{ $application->application_token }}</td>
                                     </tr>
                                     @endforeach
+
                                 </tbody>
                             </table>
                             

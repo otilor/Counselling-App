@@ -12,7 +12,7 @@
                         <div class="card-body p-4">
                             <div class="p-2">
                                 <h5 class="mb-5 text-center">Book an Appointment with the Counsellor</h5>
-                                @include('messages')
+                                @include('inc.messages')
                             <form class="form-horizontal" name = "input_token" action="{{route('book_appointment')}}" method="POST">
                                     {{csrf_field()}}
                                     <div class="row">

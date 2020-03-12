@@ -10,7 +10,3 @@ Route::get('/admin','AdminController@admin_index');
 Route::get('/profile','AdminController@admin_profile');
 Route::post('/profile','AdminController@update_profile');
 ?>
-
-
-
-
