@@ -99,7 +99,7 @@
                             <li class="menu-title">Menu</li>
 
                             <li>
-                                <a href="" class="waves-effect">
+                                <a href="/admin" class="waves-effect">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span>Dashboard</span>
                                 </a>
@@ -153,7 +153,7 @@
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);">AnCounsel</a></li>
-                                            <li class="breadcrumb-item active">Admin Dashboard</li>
+                                            <li class="breadcrumb-item active">Admin Profile</li>
                                         </ol>
                                     </div>
                                     
@@ -162,82 +162,26 @@
                         </div>     
                         <!-- end page title -->
                         
-                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Admin Dashboard</strong></h1>
+                            <h1 class="text-center" style="font-family:'Courier New', Courier, monospace; text-decoration:underline"><strong>Admin Profile</strong></h1>
                             
                             <hr>
                     
                     
 
-                    <div class="card-body">
-                        <h4 class="header-title">Here you go!</h4>
-                        <p class="card-title-desc">Very soon you will be able to take actions on the <code>Application status</code>.
-                        </p>    
-                        
-                        <div class="table-responsive" id = "table_data">
-                            <table class="table mb-0">
-                                <thead>
-                                    
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Appointment date <i class="mdi mdi-calendar"></i></th>
-                                        <th>Personal message <i class="mdi mdi-message-text-lock-outline "></i></th>
-                                        <th>Status</th>
-                                        <th>Action</th>
-                                    </tr>
+                            <h1>Edit your profile</h1>
+                            <hr>    
+                            <form method="POST">
+                                @include('inc.messages')
+                            {{ csrf_field() }}
+                            <label>Enter your username:</label>
+                            <input class="form-control" type="text" value="{{old('admin_username')}}" name= "admin_username" id="example-week-input">
+                            <br>
+                            
+                            
+                            <button type="submit" class="col-1 btn btn-primary waves-effect waves-light text-center">Submit</button>
+                            
 
-                                </thead>
-                                <tbody>
-                                    @foreach($applications as $application)
-                                    <tr>
-                                    <th scope="row">{{ $application->id }}</th>
-                                    <td>{{ $application->appointment_date }}</td>
-                                    <td>{{ str_limit($application->personal_message, 25) }}</td>
-                                    @if($application->application_status == 0)
-                                    <td>
-                                        
-                                        <a style = "color:#505d69"><i class="mdi mdi-alert-outline display-5 text-danger"></i></a>
-                                    </td>
-                                    <td>
-                                        
-                                        <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
-                                        <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
-                                    
-                                    </td>
-                                    
-                                    
-                                    @elseif($application->application_status == 1)
-                                    <td>
-                                        <i class="mdi mdi-checkbox-marked-circle-outline display-5 text-success"></i>
-                                    </td>
-                                    
-                                    
-                                    <td>
-                                        <button type="button" class="btn btn-outline-danger btn-sm">Reject</button>
-                                    </td>
-                                
-                                    
-                                    @else
-                                    <td>
-                                        <i class="mdi mdi-close display-5 text-danger"></i>
-                                    </td>
-                                    
-                                    <td>
-                                    <button type="button" class="btn btn-outline-success btn-sm">Approve</button>
-                                    </td>
-                                    @endif
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                            
-                                {{ $applications->links() }}
-                            
-                            
-                            
-                            
-                        </div>
-
-                    </div>
+                            </form>
                 
                             
                             <!-- Change Font later on -->

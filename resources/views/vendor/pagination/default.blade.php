@@ -35,6 +35,11 @@
             </li>
         @else
             <li class="page-item disabled"><i class="mdi mdi-chevron-right"></i></li>
+            
+            
+                
+            
         @endif
     </ul>
+    
 @endif

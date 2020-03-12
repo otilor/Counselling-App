@@ -7,7 +7,8 @@ Route::post('/book','ApplicationController@book_appointment')->name('book_appoin
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin','AdminController@admin_index');
-Route::get('/admin/fetch_data','AdminController@fetch_data');
+Route::get('/profile','AdminController@admin_profile');
+Route::post('/profile','AdminController@update_profile');
 ?>
 
 

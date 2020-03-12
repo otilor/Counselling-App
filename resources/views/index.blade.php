@@ -19,7 +19,7 @@
                         <div class="card-body p-4">
                             <div class="p-2">
                                 <h5 class="mb-5 text-center">View your Application Status</h5>
-                                @include('messages')
+                                @include('inc.messages')
                             <form class="form-horizontal" name = "input_token" action="{{ route('verify')}}" method="GET">
 
                                     <div class="row">
