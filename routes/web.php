@@ -15,5 +15,5 @@ Route::post('/profile','AdminController@update_profile');
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/create', 'AdminController@profile');
 Route::post('/admin/create','AdminController@create_profile');
-Route::resource('/admin', 'AdminController');
+//Route::resource('/admin', 'AdminController');
 ?>

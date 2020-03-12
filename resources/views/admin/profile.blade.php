@@ -106,7 +106,7 @@
                             </li>
 
                             <li>
-                                <a href="/profile" class="waves-effect">
+                                <a href="/admin/create" class="waves-effect">
                                     <i class="mdi mdi-face-profile"></i>
                                     <span>Profile</span>
                                 </a>
