@@ -6,7 +6,7 @@
         <title>AnCounsel | Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
-        <meta content="Themesdesign" name="author" />
+        <meta content="Gabriel" name="author" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -335,7 +335,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-right d-none d-sm-block">
-                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesdesign
+                                    Crafted with <i class="mdi mdi-heart text-danger"></i> by <a target = "_blank" href="https://github.com/GabielFemi">Gabriel Akinyosoye</a>
                                 </div>
                             </div>
                         </div>
