@@ -293,7 +293,7 @@
                                                 <th>Appointment Date</th>
                                                 <th>Personal Message</th>
                                                 <th>Status</th>
-                                                <th>Age</th>
+                                                
                                                 <th>Token</th>
                                             </tr>
                                             </thead>
@@ -311,7 +311,6 @@
                                                 @else
                                                 <td>Rejected</td>
                                                 @endif
-                                                <td>61</td>
                                                 <td>{{ $application->application_token }}</td>
                                             </tr>
                                             @endforeach
