@@ -19,7 +19,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $applications = Application::all();
+        $applications = Application::orderBy('created_at','desc')->get();
+        //return response()->json($applications);
         return view('admin.index', compact('applications', $applications));
     }
 

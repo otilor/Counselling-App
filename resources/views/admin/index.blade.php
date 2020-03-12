@@ -262,9 +262,8 @@
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Apaxy</a></li>
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                            <li class="breadcrumb-item active">Data Tables</li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">AnCounsel</a></li>
+                                            <li class="breadcrumb-item active">Admin Dashboard</li>
                                         </ol>
                                     </div>
                                     
@@ -280,11 +279,8 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="header-title">Buttons example</h4>
-                                        <p class="card-title-desc">The Buttons extension for DataTables
-                                            provides a common set of options, API methods and styling to display
-                                            buttons on a page that will interact with a DataTable. The core library
-                                            provides the based framework upon which plug-ins can built.
+                                        <h4 class="header-title">All Applications</h4>
+                                        <p class="card-title-desc">Latest applications are shown once reloaded!
                                         </p>
         
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
