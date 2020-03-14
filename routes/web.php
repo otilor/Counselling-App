@@ -17,5 +17,6 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/admin/create', 'AdminController@profile');
 Route::post('/admin/create','AdminController@create_profile');
 Route::get('/admin/pending', 'AdminController@pending_applications');
+Route::get('/admin/action', 'AdminController@application_action');
 //Route::resource('/admin', 'AdminController');
 ?>

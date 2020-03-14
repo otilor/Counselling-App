@@ -8,21 +8,21 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Gabriel" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
 
         <!-- DataTables -->
-        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Responsive datatable examples -->
-        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
+        <link href="/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
 
         <!-- Bootstrap Css -->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -38,19 +38,19 @@
                         <div class="navbar-brand-box">
                             <a href="`" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm-dark.png" alt="" height="22">
+                                    <img src="/assets/images/logo-sm-dark.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-dark.png" alt="" height="20">
+                                    <img src="/assets/images/logo-dark.png" alt="" height="20">
                                 </span>
                             </a>
 
                             <a href="" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm-light.png" alt="" height="22">
+                                    <img src="/assets/images/logo-sm-light.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="20">
+                                    <img src="/assets/images/logo-light.png" alt="" height="20">
                                 </span>
                             </a>
                         </div>
@@ -94,28 +94,28 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-flag-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="" src="assets/images/flags/us.jpg" alt="Header Language" height="14">
+                                <img class="" src="/assets/images/flags/us.jpg" alt="Header Language" height="14">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                     
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Spanish</span>
+                                    <img src="/assets/images/flags/spain.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Spanish</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/germany.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">German</span>
+                                    <img src="/assets/images/flags/germany.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">German</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Italian</span>
+                                    <img src="/assets/images/flags/italy.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Italian</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Russian</span>
+                                    <img src="/assets/images/flags/russia.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Russian</span>
                                 </a>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-bell-outline"></i>
-                        <span class="badge badge-danger badge-pill">{{ count($applications) }}</span>
+                        
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                                 aria-labelledby="page-header-notifications-dropdown">
@@ -146,7 +146,7 @@
                                             <h6 class="m-0 font-weight-medium text-uppercase"> Notifications </h6>
                                         </div>
                                         <div class="col-auto">
-                                        <span class="badge badge-pill badge-danger">New {{ count($applications) }}</span>
+                                        <span class="badge badge-pill badge-danger">New 3</span>
                                         </div>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@
                                                 </span>
                                             </div>
                                             <div class="media-body">
-                                                <h6 class="mt-0 mb-1">You have {{ count($applications) }} application(s) to review</h6>
+                                                <h6 class="mt-0 mb-1">You have 3 application(s) to review</h6>
                                                 <div class="font-size-12 text-muted">
                                                     <p class="mb-1">Kindly proceed to review the application(s)</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> {{ Auth::user()->last_login }}3 min ago</p>
@@ -169,7 +169,7 @@
                                     </a>
                                     <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="assets/images/users/avatar-3.jpg"
+                                            <img src="/assets/images/users/avatar-3.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Andrew Mackie</h6>
@@ -199,7 +199,7 @@
 
                                     <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="assets/images/users/avatar-4.jpg"
+                                            <img src="/assets/images/users/avatar-4.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Dominic Kellway</h6>
@@ -222,7 +222,7 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="/assets/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
                                 <span class="d-none d-sm-inline-block ml-1">{{Auth::user()->name}}</span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
@@ -246,7 +246,7 @@
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
-            @include('inc.nav')
+            @include('inc.action_nav')
             <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
@@ -282,8 +282,8 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="header-title">All Applications</h4>
-                                        <p class="card-title-desc">Latest applications are shown once reloaded!
+                                        <h4 class="header-title">All all_applications</h4>
+                                        <p class="card-title-desc">Latest all_applications are shown once reloaded!
                                         </p>
         
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -293,25 +293,52 @@
                                                 <th>Personal Message</th>
                                                 <th>Status</th>
                                                 
-                                                <th>Token</th>
+                                                <th>Action</th>
                                             </tr>
                                             </thead>
         
         
                                             <tbody>
-                                                @foreach ($applications as $application)
+                                                @foreach ($all_applications as $all_application)
                                             <tr>
-                                                <td>{{ $application->appointment_date }}</td>
-                                                <td>{{ str_limit($application->personal_message, 25) }}</td>
+                                                <td>{{ $all_application->appointment_date }}</td>
+                                                <td>{{ str_limit($all_application->personal_message, 25) }}</td>
                                                 
-                                                @if ($application->application_status == 1)
+                                                @if ($all_application->application_status == 0)
+                                                <td class="badge badge-warning">Pending</td>
+                                                
+                                                @elseif ($all_application->application_status == 1)
                                                 <td class="badge badge-success">Approved</td>
-                                                
-                                                @else
+                                                @else 
                                                 <td class="badge badge-danger">Rejected</td>
                                                 @endif
-                                                <td>{{ $application->application_token }}</td>
+
+
+                                                <td>
+                                                @if ($all_application->application_status == 0)
+                                                <form action="">
+                                                    <input type="submit" class="btn btn-sm" value="Approve">
+                                                </form>
+
+                                                <form action="">
+                                                    <input type="submit" class="btn btn-sm" value="Reject">
+                                                </form>
                                                 
+                                                @elseif ($all_application->application_status == 1)
+                                                <form action="">
+                                                    
+                                                    <input type="submit" class="btn btn-sm-danger" value="Reject">
+                                                </form>
+
+                                                @else
+                                                <form action="">
+                                                    <input type="submit" class="btn btn-sm-danger" value="Approve">
+                                                </form>
+
+                                                @endif
+                                            
+
+                                            </td>
                                             </tr>
                                             @endforeach
                                             
@@ -412,7 +439,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -427,7 +454,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -442,7 +469,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -461,7 +488,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -476,7 +503,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -491,7 +518,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -506,7 +533,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -521,7 +548,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -536,7 +563,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="/assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -663,32 +690,32 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="assets/libs/jquery/jquery.min.js"></script>
-        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="assets/libs/node-waves/waves.min.js"></script>
+        <script src="/assets/libs/jquery/jquery.min.js"></script>
+        <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="/assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="/assets/libs/node-waves/waves.min.js"></script>
 
         <!-- Required datatable js -->
-        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
         <!-- Buttons examples -->
-        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-        <script src="assets/libs/jszip/jszip.min.js"></script>
-        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
-        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <script src="/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="/assets/libs/jszip/jszip.min.js"></script>
+        <script src="/assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="/assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
         <!-- Responsive examples -->
-        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <script src="/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
         <!-- Datatable init js -->
-        <script src="assets/js/pages/datatables.init.js"></script>
+        <script src="/assets/js/pages/datatables.init.js"></script>
 
-        <script src="assets/js/app.js"></script>
+        <script src="/assets/js/app.js"></script>
 
     </body>
 </html>

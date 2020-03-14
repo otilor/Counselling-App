@@ -19,7 +19,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $applications = Application::orderBy('created_at','desc')->get();
+        $applications = Application::where('application_status','<>',0)->get();
         //return response()->json($applications);
         return view('admin.index', compact('applications', $applications));
     }
@@ -120,5 +120,12 @@ class AdminController extends Controller
         $new_admin_account->remember_token = sha1($request->_token);
         $new_admin_account->save();
         return redirect('/profile')->with('success','Admin Account Created');
+    }
+
+
+    public function application_action()
+    {
+        $all_applications = Application::all();
+        return view('admin.action', compact('all_applications', $all_applications));
     }
 }

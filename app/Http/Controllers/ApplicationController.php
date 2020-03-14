@@ -52,4 +52,6 @@ class ApplicationController extends Controller
     {
         return view('email');
     }
+
+    
 }
