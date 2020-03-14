@@ -11,14 +11,23 @@
                 <li>
                     <a href="/admin" class="waves-effect">
                         <i class="mdi mdi-view-dashboard"></i>
+                        <span class="badge badge-pill badge-success float-right">{{ count($applications) }}</span>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li>
+                    <a href="/admin/pending" class="waves-effect">
+                        <i class="mdi mdi-calendar-remove-outline"></i>
+                    
+                        <span>Pending</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="/admin/create" class="waves-effect">
-                        <i class="mdi mdi-face-profile"></i>
-                        <span>Profile</span>
+                        <i class="mdi mdi-account-multiple-outline "></i>
+                        <span>Create Admin Account</span>
                     </a>
                 </li>
                 <li>

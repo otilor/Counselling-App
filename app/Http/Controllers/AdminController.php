@@ -35,6 +35,13 @@ class AdminController extends Controller
         return view('admin.profile');
     }
 
+    public function pending_applications()
+    {
+        $pending_applications = Application::where('application_status',0)->orderBy('created_at','desc')->get();
+        //return response()->json($pending_applications);
+        return view('admin.pending', compact('pending_applications', $pending_applications));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
