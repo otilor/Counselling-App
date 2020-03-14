@@ -17,6 +17,9 @@
         <!-- jvectormap -->
         <link href="/assets/libs/jqvmap/jqvmap.min.css" rel="stylesheet" />
 
+        <!-- Sweet Alert-->
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+        
         <!-- Bootstrap Css -->
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->

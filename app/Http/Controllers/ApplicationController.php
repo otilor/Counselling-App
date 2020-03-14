@@ -32,6 +32,7 @@ class ApplicationController extends Controller
     public function book(){
         return view('book');
     }
+
     public function book_appointment(Request $request){
         $message = $request->personal_message;
 
@@ -45,5 +46,10 @@ class ApplicationController extends Controller
         $application->application_token = str_random(8);
         $application->save();
         return redirect('/')->with('success','Use this token: '.$application->application_token);
+    }
+    //Send Email to applicatant
+    public function send_email()
+    {
+        return view('email');
     }
 }

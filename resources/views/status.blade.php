@@ -1,6 +1,6 @@
 @extends('layouts.status_app')
 @section('content')
-
+    
         <!-- Begin page -->
         <div id="layout-wrapper">
 
@@ -160,11 +160,16 @@
                             <h3 class="text-center text-danger">Application Status: Rejected</h3>
                             @endif
                             <h6 class="text-center alert alert-info">Your Application Token: {{$applications->application_token}}</h6>
+
+                            <div class="p-3">
+                                <p>You can receive emails from the Counsellor if you provide your details(optional)</p>
+                                <button type="button" class="btn btn-primary waves-effect waves-light" id="ajax-alert">Send me an email</button>
+                            </div>
                             </div>
                             <!-- Change Font later on -->
                         
                         
-                        
+                            
 
                         
                         
@@ -405,5 +410,18 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
+
+        <!-- Sweet Alerts js -->
+        <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+        <!-- Sweet alert init js-->
+        <script src="assets/js/pages/sweet-alerts.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
         @endsection
         
