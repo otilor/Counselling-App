@@ -103,9 +103,9 @@
                             </li>
 
                             <li>
-                                <a href="/book" class="waves-effect">
-                                    <i class="mdi mdi-calendar-blank-multiple "></i>
-                                    <span>Book an Appointment</span>
+                                <a href="/" class="waves-effect">
+                                    <i class="mdi mdi-face-profile"></i>
+                                    <span>Help a fellow bro.</span>
                                 </a>
                             </li>
 
