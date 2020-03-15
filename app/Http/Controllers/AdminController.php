@@ -87,8 +87,11 @@ class AdminController extends Controller
         //Set application status for Application
         $token =  $request->get('token');
         $application_id = $request->get('application_id');
-        //$application = Application::where('id',$application_id);
-        return $application_id;
+        $update_application = Application::where('id',$application_id)->first();
+        //return response()->json($application);
+        $update_application->application_status = $token;
+        $update_application->save();
+        return redirect()->back()->with('success','Successfully Updated!');
     }
 
     /**

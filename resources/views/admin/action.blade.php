@@ -285,6 +285,7 @@
                                         <h4 class="header-title">All all_applications</h4>
                                         <p class="card-title-desc">Latest all_applications are shown once reloaded!
                                         </p>
+                                        @include('inc.messages')
         
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
@@ -335,6 +336,7 @@
                                                 @else
                                             <form action="{{ route('approve_application') }}" method="POST">
                                                 {{ csrf_field() }}
+                                                
                                                 <input type = "hidden" value = 1 name = "token">
                                                 <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
                                                     <input type="submit" class="btn btn-sm-danger" value="Approve">
