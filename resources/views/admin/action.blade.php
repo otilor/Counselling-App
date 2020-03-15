@@ -126,12 +126,13 @@
                                 <i class="mdi mdi-fullscreen"></i>
                             </button>
                         </div>
-
+                        <!--
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                                 <i class="mdi mdi-tune"></i>
                             </button>
                         </div>
+                    -->
 
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
@@ -147,7 +148,7 @@
                                             <h6 class="m-0 font-weight-medium text-uppercase"> Notifications </h6>
                                         </div>
                                         <div class="col-auto">
-                                        <span class="badge badge-pill badge-danger">New 3</span>
+                                        <span class="badge badge-pill badge-danger">New {{ count($all_applications) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -156,11 +157,11 @@
                                         <div class="media">
                                             <div class="avatar-xs mr-3">
                                                 <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="mdi mdi-cart"></i>
+                                                    <i class="mdi mdi-bell"></i>
                                                 </span>
                                             </div>
                                             <div class="media-body">
-                                                <h6 class="mt-0 mb-1">You have 3 application(s) to review</h6>
+                                                <h6 class="mt-0 mb-1">You have {{ count($all_applications) }} application(s) to review</h6>
                                                 <div class="font-size-12 text-muted">
                                                     <p class="mb-1">Kindly proceed to review the application(s)</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> {{ Auth::user()->last_login }}3 min ago</p>
@@ -168,7 +169,8 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" class="text-reset notification-item">
+                                    <!--
+                                        <a href="" class="text-reset notification-item">
                                         <div class="media">
                                             <img src="/assets/images/users/avatar-3.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
@@ -210,7 +212,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>
+                                    </a>-->
                                 </div>
                                 <div class="p-2 border-top">
                                     <a class="btn-link btn btn-block text-center" href="javascript:void(0)">
@@ -424,7 +426,13 @@
                             </div>
                         </form>
 
-                        <h6 class="font-weight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
+                        <h6 class="font-w
+                        <form class="p-3">
+                            <div class="form-group m-0">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit"><i class="mdi mdi-magneight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
 
                         <div class="p-2">
                             <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">

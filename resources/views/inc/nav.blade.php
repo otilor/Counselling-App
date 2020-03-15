@@ -26,7 +26,7 @@
 
                 <li>
                     <a href="/admin/create" class="waves-effect">
-                        <i class="mdi mdi-account-multiple-outline "></i>
+                        <i class="fas fa-user-plus"></i>
                         <span>Create Admin Account</span>
                     </a>
                 </li>

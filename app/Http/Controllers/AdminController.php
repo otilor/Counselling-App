@@ -91,7 +91,17 @@ class AdminController extends Controller
         //return response()->json($application);
         $update_application->application_status = $token;
         $update_application->save();
-        return redirect()->back()->with('success','Successfully Updated!');
+        
+        
+        if ($token == 1)
+        {
+            return redirect()->back()->with('success','Application Approved!');
+        }
+
+        else
+        {
+            return redirect()->back()->with('success','Application Rejected!');
+        }
     }
 
     /**
@@ -105,11 +115,7 @@ class AdminController extends Controller
         //
     }
 
-    public function profile()
-    {
-        //Create a profile for admin
-        return view('admin.profile');
-    }
+   
 
     public function create_profile(Request $request)
     {
@@ -126,7 +132,7 @@ class AdminController extends Controller
         $new_admin_account->password = bcrypt($request->password);
         $new_admin_account->remember_token = sha1($request->_token);
         $new_admin_account->save();
-        return redirect('/profile')->with('success','Admin Account Created');
+        return redirect()->back()->with('success','Admin User Created!');
     }
 
 
