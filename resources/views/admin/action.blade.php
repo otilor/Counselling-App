@@ -319,12 +319,20 @@
 
                                                 <td>
                                                 @if ($all_application->application_status == 0)
-                                                <form action="">
-                                                    <input type="submit" class="btn btn-success" value="Approve">
+                                                <form action="{{ route('admin_action') }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                    
+                                                    <input type = "hidden" value = 1 name = "token">
+                                                    <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
+                                                        <input type="submit" class="btn btn-success" value="Approve">
+                                                        
                                                 </form>
 
-                                                <form action="">
-                                                    <input type="submit" class="btn btn-danger" value="Reject">
+                                                <form action="{{ route('admin_action') }}" method="POST">
+                                                    {{ csrf_field() }}
+                                                        <input type="hidden" value= 2 name = "token">
+                                                        <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
+                                                        <input type="submit" class="btn btn-danger" value="Reject">
                                                 </form>
                                                 
                                                 @elseif ($all_application->application_status == 1)
