@@ -153,17 +153,17 @@
                             <h3 class="text-center">Application Date: {{$applications->appointment_date}}</h3>
                             <h3 class="text-center">Personal Message: {{$applications->personal_message}}</h3>
                             @if($applications->application_status == 0)
-                            <h3 class="text-center text-warning">Application Status: Pending</h3>
+                            <h3 class="text-center text-info">Application Status: Pending <span class="fas fa-info-circle "></span></h3>
                             @elseif($applications->application_status  == 1)
-                            <h3 class="text-center text-success">Application Status: Accepted</h3>
+                            <h3 class="text-center text-success">Application Status: Accepted <span class="fas fa-handshake"></span></h3>
                             @else
-                            <h3 class="text-center text-danger">Application Status: Rejected</h3>
+                            <h3 class="text-center text-danger">Application Status: Declined <span class="fas fa-grin-squint-tears "></span></h3>
                             @endif
-                            <h6 class="text-center alert alert-info">Your Application Token: {{$applications->application_token}}</h6>
-
-                            <div class="p-3">
-                                <p>You can receive emails from the Counsellor if you provide your details(optional)</p>
-                                <button type="button" class="btn btn-primary waves-effect waves-light" id="ajax-alert">Send me an email</button>
+                            <h6 class="text-center alert alert-info">Your Application Token: <code><strong>{{$applications->application_token}}</strong></code></h6>
+                            <hr>
+                            <div class="p-3 text-center">
+                                <code><strong><p>If you have issues with your application send a mail with your application token to gabrielfemi799@gmail.com</p></strong></code>
+                                <!--<button type="button" class="btn btn-primary waves-effect waves-light" id="ajax-alert">Send me an email</button>-->
                             </div>
                             </div>
                             <!-- Change Font later on -->

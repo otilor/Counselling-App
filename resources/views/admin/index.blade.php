@@ -306,11 +306,15 @@
                                                 <td>{{ $application->appointment_date }}</td>
                                                 <td>{{ str_limit($application->personal_message, 25) }}</td>
                                                 
-                                                @if ($application->application_status == 1)
-                                                <td class="badge badge-success">Approved</td>
+                                                @if ($application->application_status == 0)
+                                                <td class="badge badge-warning">Pending</td>
                                                 
+                                                @elseif ($application->application_status == 1)
+                                                <td class="badge badge-success">Approved</td>
+
                                                 @else
-                                                <td class="badge badge-danger">Rejected</td>
+                                                <td class="badge badge-danger">Declined</td>
+
                                                 @endif
                                                 <td>{{ $application->application_token }}</td>
                                                 
