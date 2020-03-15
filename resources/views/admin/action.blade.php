@@ -285,6 +285,7 @@
                                         <h4 class="header-title">All all_applications</h4>
                                         <p class="card-title-desc">Latest all_applications are shown once reloaded!
                                         </p>
+                                    <h3 class="alert alert-info">Currently, you have {{ count($all_applications) }} Applications to act on.</h3>
                                         @include('inc.messages')
         
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
@@ -307,23 +308,23 @@
                                                 <td>{{ str_limit($all_application->personal_message, 25) }}</td>
                                                 
                                                 @if ($all_application->application_status == 0)
-                                                <td class="badge badge-warning">Pending</td>
+                                                <td class>Pending<span class="mdi mdi-alert-outline"></span></td>
                                                 
                                                 @elseif ($all_application->application_status == 1)
-                                                <td class="badge badge-success">Approved</td>
+                                                <td>Approved<span class="mdi mdi-check"></span></td>
                                                 @else 
-                                                <td class="badge badge-danger">Rejected</td>
+                                                <td>Rejected<span class="mdi mdi-close"></span></td>
                                                 @endif
 
 
                                                 <td>
                                                 @if ($all_application->application_status == 0)
                                                 <form action="">
-                                                    <input type="submit" class="btn btn-sm" value="Approve">
+                                                    <input type="submit" class="btn btn-success" value="Approve">
                                                 </form>
 
                                                 <form action="">
-                                                    <input type="submit" class="btn btn-sm" value="Reject">
+                                                    <input type="submit" class="btn btn-danger" value="Reject">
                                                 </form>
                                                 
                                                 @elseif ($all_application->application_status == 1)
@@ -331,7 +332,7 @@
                                                 {{ csrf_field() }}
                                                     <input type="hidden" value= 2 name = "token">
                                                     <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                    <input type="submit" class="btn btn-sm-danger" value="Reject">
+                                                    <input type="submit" class="btn btn-danger" value="Reject">
                                             </form>
 
                                                 @else
@@ -340,7 +341,8 @@
                                                 
                                                 <input type = "hidden" value = 1 name = "token">
                                                 <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                    <input type="submit" class="btn btn-sm-danger" value="Approve">
+                                                    <input type="submit" class="btn btn-success" value="Approve">
+                                                    
                                             </form>
 
                                                 @endif

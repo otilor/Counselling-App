@@ -19,7 +19,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $applications = Application::where('application_status','<>',0)->get();
+        $applications = Application::all();
         //return response()->json($applications);
         return view('admin.index', compact('applications', $applications));
     }

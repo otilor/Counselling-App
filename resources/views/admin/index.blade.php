@@ -285,7 +285,9 @@
                                         <h4 class="header-title">All Applications</h4>
                                         <p class="card-title-desc">Latest applications are shown once reloaded!
                                         </p>
-        
+                                    <div class="">
+                                    <h3>Hello, {{ Auth::user()->name }}, so far, you've had {{ count($applications) }} applications. ain't that cute?</h3>
+                                    </div>
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
