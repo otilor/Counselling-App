@@ -294,7 +294,6 @@
                                                 <th>Appointment Date</th>
                                                 <th>Personal Message</th>
                                                 <th>Status</th>
-                                                
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
@@ -328,19 +327,21 @@
                                                 </form>
                                                 
                                                 @elseif ($all_application->application_status == 1)
-                                                <form action="">
-                                                    
+                                            <form action="{{ route('admin_action') }}" method="POST">
+                                                {{ csrf_field() }}
+                                                    <input type="hidden" value= 2 name = "token">
+                                                    <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
                                                     <input type="submit" class="btn btn-sm-danger" value="Reject">
-                                                </form>
+                                            </form>
 
                                                 @else
-                                            <form action="{{ route('approve_application') }}" method="POST">
+                                            <form action="{{ route('admin_action') }}" method="POST">
                                                 {{ csrf_field() }}
                                                 
                                                 <input type = "hidden" value = 1 name = "token">
                                                 <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
                                                     <input type="submit" class="btn btn-sm-danger" value="Approve">
-                                                </form>
+                                            </form>
 
                                                 @endif
                                             
