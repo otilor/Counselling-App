@@ -246,7 +246,7 @@
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
-            @include('inc.nav')
+            @include('inc.admin_nav')
             <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->

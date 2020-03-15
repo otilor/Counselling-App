@@ -129,19 +129,19 @@
                                 @include('inc.messages')
                             {{ csrf_field() }}
                             <label>Enter email:</label>
-                            <input class="form-control" type="email" value="{{old('email')}}" name= "email">
+                            <input class="form-control" type="email" value="{{old('email')}}" name= "email" required = "">
                             <br>
 
                             <label>Enter name:</label>
-                            <input class="form-control" type="text" value="{{old('name')}}" name= "name">
+                            <input class="form-control" type="text" value="{{old('name')}}" name= "name" required= "">
                             <br>
 
                             <label>Enter Password:</label>
-                            <input class="form-control" type="password" value="{{old('password')}}" name= "password">
+                            <input class="form-control" type="password" value="{{old('password')}}" name= "password" required = "">
                             <br>
 
                             <label>Confirm Password:</label>
-                            <input class="form-control" type="password" value="{{old('confirm_password')}}" name= "password_confirmation">
+                            <input class="form-control" type="password" value="{{old('confirm_password')}}" name= "password_confirmation" required="" >
                             <br>
                             
                             
