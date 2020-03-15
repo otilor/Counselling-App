@@ -289,6 +289,7 @@
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
+                                                <th>Id</th>
                                                 <th>Appointment Date</th>
                                                 <th>Personal Message</th>
                                                 <th>Status</th>
@@ -301,6 +302,7 @@
                                             <tbody>
                                                 @foreach ($all_applications as $all_application)
                                             <tr>
+                                                <td>{{ $all_application->id }}</td>
                                                 <td>{{ $all_application->appointment_date }}</td>
                                                 <td>{{ str_limit($all_application->personal_message, 25) }}</td>
                                                 
@@ -331,7 +333,10 @@
                                                 </form>
 
                                                 @else
-                                                <form action="">
+                                            <form action="{{ route('approve_application') }}" method="POST">
+                                                {{ csrf_field() }}
+                                                <input type = "hidden" value = 1 name = "token">
+                                                <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
                                                     <input type="submit" class="btn btn-sm-danger" value="Approve">
                                                 </form>
 

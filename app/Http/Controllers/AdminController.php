@@ -82,9 +82,13 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //Set application status for Application
+        $token =  $request->get('token');
+        $application_id = $request->get('application_id');
+        //$application = Application::where('id',$application_id);
+        return $application_id;
     }
 
     /**
@@ -128,4 +132,7 @@ class AdminController extends Controller
         $all_applications = Application::all();
         return view('admin.action', compact('all_applications', $all_applications));
     }
+    
+
+    
 }
