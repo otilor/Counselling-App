@@ -59,13 +59,14 @@
                             <i class="mdi mdi-backburger"></i>
                         </button>
 
-                        <!-- App Search-->
+                        <!-- App Search
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="mdi mdi-magnify"></span>
                             </div>
                         </form>
+                        -->
                     </div>
 
                     <div class="d-flex">
@@ -229,10 +230,6 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- item-->
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Profile</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
-                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
                             <form method="POST" name = "logout" action="{{ route('logout') }}">
                                 {{ csrf_field() }}
