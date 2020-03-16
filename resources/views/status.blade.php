@@ -172,10 +172,10 @@
                                 @else
                                 <!--If application is rejected by Counsellor-->
                                 <code><strong><p>Counsellor is not comfortable with your application date Sorry, you will have to reapply!</p></strong></code>
-
+                                <!--
                                 <form action="">
                                     <button class="btn btn-primary" type="submit">Reapply</button>
-                                </form>
+                                </form>-->
 
                                 @endif
                             </div>
