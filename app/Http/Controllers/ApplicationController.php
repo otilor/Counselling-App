@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use\App\Application;
+use Illuminate\Support\Str;
 
 class ApplicationController extends Controller
 {
@@ -43,7 +44,7 @@ class ApplicationController extends Controller
         $application = new Application;
         $application->appointment_date = $request->appointment_date;
         $application->personal_message = $request->personal_message;
-        $application->application_token = str_random(8);
+        $application->application_token = Str::random(8);
         $application->save();
         return redirect('/')->with('success','Use this token: '.$application->application_token);
     }
