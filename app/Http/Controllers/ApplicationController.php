@@ -23,7 +23,7 @@ class ApplicationController extends Controller
         ]);
         $token = $request->get('token');
         
-        $applications = Application::where('application_token',$token)->first();
+        $applications = Application::where('application_token','LIKE',$token)->first();
         if(!$applications){
             return redirect()->route('check')->with('error','No Application attached to this token'.$applications);
         }
