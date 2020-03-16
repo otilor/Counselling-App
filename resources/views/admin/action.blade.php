@@ -14,6 +14,12 @@
         <link href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
         <link href="/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
+        <!-- alertifyjs Css -->
+        <link href="/assets/libs/alertifyjs/build/css/alertify.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- alertifyjs default themes  Css -->
+        <link href="/assets/libs/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" type="text/css" />
+
         <!-- Responsive datatable examples -->
         <link href="/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
 
@@ -284,6 +290,7 @@
                                         <h4 class="header-title">All all_applications</h4>
                                         <p class="card-title-desc">Latest all_applications are shown once reloaded!
                                         </p>
+                                        <!--<a href="javascript: void(0);" id="decline-application" class="btn btn-primary waves-effect waves-light">Click me</a>-->
                                     <h3 class="alert alert-info">Currently, you have {{ count($all_applications) }} Applications to act on.</h3>
                                         @include('inc.messages')
         
@@ -307,12 +314,12 @@
                                                 <td>{{ str_limit($all_application->personal_message, 25) }}</td>
                                                 
                                                 @if ($all_application->application_status == 0)
-                                                <td class>Pending<span class="mdi mdi-alert-outline"></span></td>
+                                                <td class = "badge badge-warning"><span class="mdi mdi-alert-outline"></span></td>
                                                 
                                                 @elseif ($all_application->application_status == 1)
-                                                <td>Approved<span class="mdi mdi-check"></span></td>
+                                                <td class="badge badge-success"><span class="mdi mdi-check"></span></td>
                                                 @else 
-                                                <td>Rejected<span class="mdi mdi-close"></span></td>
+                                                <td class="badge badge-danger"><span class="mdi mdi-close"></span></td>
                                                 @endif
 
 
@@ -737,6 +744,12 @@
 
         <!-- Datatable init js -->
         <script src="/assets/js/pages/datatables.init.js"></script>
+
+        <!-- alertifyjs js -->
+        <script src="/assets/libs/alertifyjs/build/alertify.min.js"></script>
+
+        <script src="/assets/js/pages/alertifyjs.init.js"></script>
+
 
         <script src="/assets/js/app.js"></script>
 

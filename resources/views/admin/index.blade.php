@@ -288,6 +288,7 @@
                                     <div class="">
                                     <h3>Hello, {{ Auth::user()->name }}, so far, you've had {{ count($applications) }} applications. ain't that cute?</h3>
                                     </div>
+                                    
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
@@ -693,6 +694,8 @@
 
         <!-- Datatable init js -->
         <script src="assets/js/pages/datatables.init.js"></script>
+
+        
 
         <script src="assets/js/app.js"></script>
 
