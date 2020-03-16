@@ -162,8 +162,22 @@
                             <h6 class="text-center alert alert-info">Your Application Token: <code><strong>{{$applications->application_token}}</strong></code></h6>
                             <hr>
                             <div class="p-3 text-center">
-                                <code><strong><p>If you have issues with your application send a mail with your application token to gabrielfemi799@gmail.com</p></strong></code>
+                                @if ($applications->application_status == 0)
+                                <code><strong><p>You will have to wait a while as your application is being reviewed by the counsellor</p></strong></code>
                                 <!--<button type="button" class="btn btn-primary waves-effect waves-light" id="ajax-alert">Send me an email</button>-->
+
+                                @elseif ($applications->application_status == 1)
+                                <code><strong><p>Nice one! You can come on the appointed day.</p></strong></code>
+
+                                @else
+                                <!--If application is rejected by Counsellor-->
+                                <code><strong><p>Counsellor is not comfortable with your application date Sorry, you will have to reapply!</p></strong></code>
+
+                                <form action="">
+                                    <button class="btn btn-primary" type="submit">Reapply</button>
+                                </form>
+
+                                @endif
                             </div>
                             </div>
                             <!-- Change Font later on -->
