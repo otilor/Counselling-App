@@ -335,15 +335,16 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="header-title">All Applications</h4>
+                                        <h4 class="header-title">{{ count($pending_applications) }} Pending Applications</h4>
                                         <p class="card-title-desc">Latest applications are shown once reloaded!
                                         </p>
-        
+                                        @include ('inc.messages')
                                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
                                                 <th>Appointment Date</th>
                                                 <th>Personal Message</th>
+                                                <th>Action</th>
                                                 
                                             </tr>
                                             </thead>
@@ -354,6 +355,27 @@
                                             <tr>
                                                 <td>{{ $pending_application->appointment_date }}</td>
                                                 <td>{{ str_limit($pending_application->personal_message, 50) }}</td>
+                                                <td>
+                                                    <form action="{{ route('admin_action') }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                        
+                                                        <input type = "hidden" value = 1 name = "token">
+                                                        <input type = "hidden" value = {{ $pending_application->id }} name = "application_id">
+                                                            <input type="submit" class="btn btn-success" value="Approve">
+                                                            
+                                                    </form>
+    
+                                                    <form action="{{ route('admin_action') }}" method="POST">
+                                                        {{ csrf_field() }}
+                                                            <input type="hidden" value= 2 name = "token">
+                                                            <input type = "hidden" value = {{ $pending_application->id }} name = "application_id">
+                                                            <input type="submit" class="btn btn-danger" value="Reject">
+                                                    </form>
+                                                </td>
+
+                                                
+                                                
+                                                    
                                                 
                                                 
                                             </tr>
