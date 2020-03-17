@@ -34,7 +34,7 @@
                                             <div class="mt-4">
                                                 <button  id = "process_button" class="btn btn-success btn-block waves-effect waves-light" type="submit">Check Appointment</button>
                                             </div>
-                                            <div class="mt-4 text-center">
+                                            <div class="mt-4 text-center" id = "book_application">
                                                 <a href="/book" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i> Book an Appointment?</a>
                                             </div>
                                         </div>
@@ -64,6 +64,19 @@
             {
                 $.ajax({
                     url: '/verify?token='+token
+                }).done(function(data){
+                    $('body').html(data);
+                });
+            }
+        });
+
+        $('#book_application').click(function(e){
+            e.preventDefault();
+            book_application()
+
+            function book_application(){
+                $.ajax({
+                    url: '/book'
                 }).done(function(data){
                     $('body').html(data);
                 });
