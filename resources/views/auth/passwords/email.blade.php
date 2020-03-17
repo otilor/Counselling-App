@@ -2,7 +2,7 @@
 @section('content')
 <body class="bg-primary bg-pattern">
 <div class="home-btn d-none d-sm-block">
-    <a href="index.html"><i class="mdi mdi-home-variant h2 text-white"></i></a>
+    <a href="/"><i class="mdi mdi-home-variant h2 text-white"></i></a>
 </div>
 
 <div class="account-pages my-5 pt-5">
@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="text-center mb-5">
-                    <a href="index.html" class="logo"><img src="/assets/images/logo-light.png" height="24" alt="logo"></a>
+                    <a href="/" class="logo"><img src="/assets/images/logo-light.png" height="24" alt="logo"></a>
                     <h5 class="font-size-16 text-white-50 mb-4">Counselling App for Anchor University, Lagos</h5>
                 </div>
             </div>
