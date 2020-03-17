@@ -138,7 +138,7 @@ class AdminController extends Controller
 
     public function application_action()
     {
-        $all_applications = Application::all();
+        $all_applications = Application::paginate(15);
         return view('admin.action', compact('all_applications', $all_applications));
     }
     

@@ -11,7 +11,7 @@
                 <li>
                     <a href="/admin" class="waves-effect">
                         <i class="mdi mdi-view-dashboard"></i>
-                        <span class="badge badge-pill badge-success float-right">{{ count($all_applications) }}</span>
+                        
                         <span>Dashboard</span>
                     </a>
                 </li>
@@ -35,6 +35,7 @@
                 <li>
                     <a href="/admin/action" class="waves-effect">
                         <i class="fas fa-hammer"></i>
+                        <span class="badge badge-pill badge-success float-right">{{ $all_applications->total() }}</span>
                         <span>Take action</span>
                     </a>
                 </li>

@@ -154,7 +154,7 @@
                                             <h6 class="m-0 font-weight-medium text-uppercase"> Notifications </h6>
                                         </div>
                                         <div class="col-auto">
-                                        <span class="badge badge-pill badge-danger">New {{ count($all_applications) }}</span>
+                                        <span class="badge badge-pill badge-danger">New {{ $all_applications->total() }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                                                 </span>
                                             </div>
                                             <div class="media-body">
-                                                <h6 class="mt-0 mb-1">You have {{ count($all_applications) }} application(s) to review</h6>
+                                                <h6 class="mt-0 mb-1">You have {{ $all_applications->total() }} application(s) to review</h6>
                                                 <div class="font-size-12 text-muted">
                                                     <p class="mb-1">Kindly proceed to review the application(s)</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> {{ Auth::user()->last_login }}3 min ago</p>
@@ -291,10 +291,10 @@
                                         <p class="card-title-desc">Latest all_applications are shown once reloaded!
                                         </p>
                                         <!--<a href="javascript: void(0);" id="decline-application" class="btn btn-primary waves-effect waves-light">Click me</a>-->
-                                    <h3 class="alert alert-info">Currently, you have {{ count($all_applications) }} Applications to act on.</h3>
+                                    <h3 class="alert alert-info">Currently, you have {{ $all_applications->total() }} Applications to act on.</h3>
                                         @include('inc.messages')
-        
-                                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <div class="table_content">
+                                        <table class="table">
                                             <thead>
                                             <tr>
                                                 <th>Id</th>
@@ -367,7 +367,10 @@
                                             @endforeach
                                             
                                             </tbody>
+                                            
                                         </table>
+                                        </div>
+                                        {{ $all_applications->links() }}
                                     </div>
                                 </div>
                             </div> <!-- end col -->
@@ -752,6 +755,24 @@
 
 
         <script src="/assets/js/app.js"></script>
+        <script>
 
+        $(document).on('click','.pagination a', function(e){
+			e.preventDefault();
+			var page = $(this).attr('href').split('page=')[1];
+			// getProducts(page);
+			getProducts(page);
+		});
+        
+
+        function getProducts(page){
+			$.ajax({
+				url: '/admin/action?page=' + page
+			}).done(function(data){   
+				$('body').html(data);
+                
+			});
+		}
+        </script>
     </body>
 </html>
