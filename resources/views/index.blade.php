@@ -27,12 +27,12 @@
                                             
                                             <div class="form-group mb-4">
                                                 <label for="userpassword"><i class="mdi mdi-lock"></i> Application Token</label>
-                                                <input name = "token" maxlength = "8" class="form-control" id="userpassword" placeholder="Enter Token">
+                                                <input id = "token" name = "token" maxlength = "8" class="form-control" id="userpassword" placeholder="Enter Token">
                                             </div>
 
                                             
                                             <div class="mt-4">
-                                                <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Check Appointment</button>
+                                                <button  id = "process_button" class="btn btn-success btn-block waves-effect waves-light" type="submit">Check Appointment</button>
                                             </div>
                                             <div class="mt-4 text-center">
                                                 <a href="/book" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i> Book an Appointment?</a>
@@ -48,7 +48,28 @@
             <!-- end row -->
         </div>
     </div>
+    <script src="/assets/libs/jquery/jquery.min.js"></script>
 <script>
     document.input_token.token.focus();
+</script>
+<script>
+    $(document).ready(function(){
+        $('#process_button').click(function(e){
+            e.preventDefault();
+            
+            var token = $('#token').val();
+            fetch_application(token);
+            
+            function fetch_application()
+            {
+                $.ajax({
+                    url: '/verify?token='+token
+                }).done(function(data){
+                    $('body').html(data);
+                });
+            }
+        });
+    });
+
 </script>
 @endsection
