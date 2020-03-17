@@ -20,4 +20,3 @@ Route::get('/admin/pending', 'AdminController@pending_applications');
 Route::get('/admin/action', 'AdminController@application_action');
 Route::post('/admin','AdminController@update')->name('admin_action');
 //Route::resource('/admin', 'AdminController');
-?>
