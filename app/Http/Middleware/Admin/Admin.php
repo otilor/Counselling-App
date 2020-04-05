@@ -15,6 +15,17 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
+        if (!Auth::check()){
+            return redirect()->route('login');
+        }
+
+        if(Auth::user()->role_id == 0){
+            return "Y";
+        }
+        else
+        {
+            return "N";
+        }
         return $next($request);
     }
 }
