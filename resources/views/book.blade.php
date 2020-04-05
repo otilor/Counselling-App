@@ -47,17 +47,4 @@
     document.input_token.token.focus();
 </script>
 
-<script>
-    $(document).ready(function(){
-        $('#have').click(function(e){
-            e.preventDefault();
-            $.ajax({
-                url: '/'
-
-            }).done(function(response){
-                $('body').html(response);
-            });
-        });
-    });
-</script>
 @endsection

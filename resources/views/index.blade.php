@@ -52,37 +52,4 @@
 <script>
     document.input_token.token.focus();
 </script>
-<script>
-    $(document).ready(function(){
-        $('#process_button').click(function(e){
-            e.preventDefault();
-            
-            var token = $('#token').val();
-            fetch_application(token);
-            
-            function fetch_application()
-            {
-                $.ajax({
-                    url: '/verify?token='+token
-                }).done(function(data){
-                    $('body').html(data);
-                });
-            }
-        });
-
-        $('#book_application').click(function(e){
-            e.preventDefault();
-            book_application()
-
-            function book_application(){
-                $.ajax({
-                    url: '/book'
-                }).done(function(data){
-                    $('body').html(data);
-                });
-            }
-        });
-    });
-
-</script>
 @endsection
