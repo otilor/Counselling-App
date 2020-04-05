@@ -95,12 +95,12 @@ class AdminController extends Controller
         
         if ($token == 1)
         {
-            return redirect()->back()->with('success','Application Approved!');
+            return back()->with('success','Application Approved!');
         }
 
         else
         {
-            return redirect()->back()->with('success','Application Rejected!');
+            return back()->with('success','Application Rejected!');
         }
     }
 

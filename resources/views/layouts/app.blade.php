@@ -26,7 +26,7 @@
 
     </head>
 
-    <body data-sidebar="dark" class="bg-light">
+    <body data-sidebar="dark" class="bg-dark">
 
         <!-- Begin page -->
         @yield('content')
