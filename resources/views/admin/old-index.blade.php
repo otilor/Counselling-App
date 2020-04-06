@@ -8,27 +8,21 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Gabriel" name="author" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- DataTables -->
-        <link href="/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-
-        <!-- alertifyjs Css -->
-        <link href="/assets/libs/alertifyjs/build/css/alertify.min.css" rel="stylesheet" type="text/css" />
-
-        <!-- alertifyjs default themes  Css -->
-        <link href="/assets/libs/alertifyjs/build/css/themes/default.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
         <!-- Responsive datatable examples -->
-        <link href="/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
+        <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />     
 
         <!-- Bootstrap Css -->
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
-        <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <!-- App Css-->
-        <link href="/assets/css/app.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -44,19 +38,19 @@
                         <div class="navbar-brand-box">
                             <a href="`" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="/assets/images/logo-sm-dark.png" alt="" height="22">
+                                    <img src="assets/images/logo-sm-dark.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="/assets/images/logo-dark.png" alt="" height="20">
+                                    <img src="assets/images/logo-dark.png" alt="" height="20">
                                 </span>
                             </a>
 
                             <a href="" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="/assets/images/logo-sm-light.png" alt="" height="22">
+                                    <img src="assets/images/logo-sm-light.png" alt="" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="/assets/images/logo-light.png" alt="" height="20">
+                                    <img src="assets/images/logo-light.png" alt="" height="20">
                                 </span>
                             </a>
                         </div>
@@ -65,14 +59,13 @@
                             <i class="mdi mdi-backburger"></i>
                         </button>
 
-                        <!-- App Search
+                        <!-- App Search-->
                         <form class="app-search d-none d-lg-block">
                             <div class="position-relative">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="mdi mdi-magnify"></span>
                             </div>
                         </form>
-                        -->
                     </div>
 
                     <div class="d-flex">
@@ -101,28 +94,28 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-flag-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="" src="/assets/images/flags/us.jpg" alt="Header Language" height="14">
+                                <img class="" src="assets/images/flags/us.jpg" alt="Header Language" height="14">
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                     
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="/assets/images/flags/spain.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Spanish</span>
+                                    <img src="assets/images/flags/spain.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Spanish</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="/assets/images/flags/germany.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">German</span>
+                                    <img src="assets/images/flags/germany.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">German</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="/assets/images/flags/italy.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Italian</span>
+                                    <img src="assets/images/flags/italy.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Italian</span>
                                 </a>
 
                                 <!-- item-->
                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                    <img src="/assets/images/flags/russia.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Russian</span>
+                                    <img src="assets/images/flags/russia.jpg" alt="user-image" class="mr-2" height="12"><span class="align-middle">Russian</span>
                                 </a>
                             </div>
                         </div>
@@ -132,19 +125,18 @@
                                 <i class="mdi mdi-fullscreen"></i>
                             </button>
                         </div>
-                        <!--
+
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
                                 <i class="mdi mdi-tune"></i>
                             </button>
                         </div>
-                    -->
 
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-bell-outline"></i>
-                        
+                        <span class="badge badge-danger badge-pill">{{ count($applications) }}</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-0"
                                 aria-labelledby="page-header-notifications-dropdown">
@@ -154,7 +146,7 @@
                                             <h6 class="m-0 font-weight-medium text-uppercase"> Notifications </h6>
                                         </div>
                                         <div class="col-auto">
-                                        <span class="badge badge-pill badge-danger">New {{ $all_applications->total() }}</span>
+                                        <span class="badge badge-pill badge-danger">New {{ count($applications) }}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -163,11 +155,11 @@
                                         <div class="media">
                                             <div class="avatar-xs mr-3">
                                                 <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                                    <i class="mdi mdi-bell"></i>
+                                                    <i class="mdi mdi-cart"></i>
                                                 </span>
                                             </div>
                                             <div class="media-body">
-                                                <h6 class="mt-0 mb-1">You have {{ $all_applications->total() }} application(s) to review</h6>
+                                                <h6 class="mt-0 mb-1">You have {{ count($applications) }} application(s) to review</h6>
                                                 <div class="font-size-12 text-muted">
                                                     <p class="mb-1">Kindly proceed to review the application(s)</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> {{ Auth::user()->last_login }}3 min ago</p>
@@ -175,10 +167,9 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <!--
-                                        <a href="" class="text-reset notification-item">
+                                    <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="/assets/images/users/avatar-3.jpg"
+                                            <img src="assets/images/users/avatar-3.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Andrew Mackie</h6>
@@ -208,7 +199,7 @@
 
                                     <a href="" class="text-reset notification-item">
                                         <div class="media">
-                                            <img src="/assets/images/users/avatar-4.jpg"
+                                            <img src="assets/images/users/avatar-4.jpg"
                                                 class="mr-3 rounded-circle avatar-xs" alt="user-pic">
                                             <div class="media-body">
                                                 <h6 class="mt-0 mb-1">Dominic Kellway</h6>
@@ -218,7 +209,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </a>-->
+                                    </a>
                                 </div>
                                 <div class="p-2 border-top">
                                     <a class="btn-link btn btn-block text-center" href="javascript:void(0)">
@@ -231,13 +222,17 @@
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img class="rounded-circle header-profile-user" src="/assets/images/users/avatar-1.jpg"
+                                <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
                                     alt="Header Avatar">
                                 <span class="d-none d-sm-inline-block ml-1">{{Auth::user()->name}}</span>
                                 <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right">
                                 <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-face-profile font-size-16 align-middle mr-1"></i> Profile</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-credit-card-outline font-size-16 align-middle mr-1"></i> Billing</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-account-settings font-size-16 align-middle mr-1"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="mdi mdi-lock font-size-16 align-middle mr-1"></i> Lock screen</a>
                                 <div class="dropdown-divider"></div>
                             <form method="POST" name = "logout" action="{{ route('logout') }}">
                                 {{ csrf_field() }}
@@ -251,7 +246,7 @@
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
-            @include('inc.action_nav')
+            @include('inc.admin_nav')
             <!-- Left Sidebar End -->
 
             <!-- ============================================================== -->
@@ -287,90 +282,48 @@
                                 <div class="card">
                                     <div class="card-body">
         
-                                        <h4 class="header-title">All all_applications</h4>
-                                        <p class="card-title-desc">Latest all_applications are shown once reloaded!
+                                        <h4 class="header-title">All Applications</h4>
+                                        <p class="card-title-desc">Latest applications are shown once reloaded!
                                         </p>
-                                        <!--<a href="javascript: void(0);" id="decline-application" class="btn btn-primary waves-effect waves-light">Click me</a>-->
-                                    <h3 class="alert alert-info">Currently, you have {{ $all_applications->total() }} Applications to act on.</h3>
-                                        @include('inc.messages')
-                                        <div class="table_content">
-                                        <table class="table">
+                                    <div class="">
+                                    <h3>Hello, {{ Auth::user()->name }}, so far, you've had {{ count($applications) }} applications. ain't that cute?</h3>
+                                    </div>
+                                    
+                                        <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                             <thead>
                                             <tr>
-                                                <th>Id</th>
                                                 <th>Appointment Date</th>
                                                 <th>Personal Message</th>
                                                 <th>Status</th>
-                                                <th>Action</th>
+                                                
+                                                <th>Token</th>
                                             </tr>
                                             </thead>
         
         
                                             <tbody>
-                                                @foreach ($all_applications as $all_application)
+                                                @foreach ($applications as $application)
                                             <tr>
-                                                <td>{{ $all_application->id }}</td>
-                                                <td>{{ $all_application->appointment_date }}</td>
-                                                <td>{{ str_limit($all_application->personal_message, 25) }}</td>
+                                                <td>{{ $application->appointment_date }}</td>
+                                                <td>{{ str_limit($application->personal_message, 25) }}</td>
                                                 
-                                                @if ($all_application->application_status == 0)
-                                                <td class = "badge badge-warning"><span class="mdi mdi-alert-outline"></span></td>
+                                                @if ($application->application_status == 0)
+                                                <td class="badge badge-warning">Pending</td>
                                                 
-                                                @elseif ($all_application->application_status == 1)
-                                                <td class="badge badge-success"><span class="mdi mdi-check"></span></td>
-                                                @else 
-                                                <td class="badge badge-danger"><span class="mdi mdi-close"></span></td>
-                                                @endif
-
-
-                                                <td>
-                                                @if ($all_application->application_status == 0)
-                                                <form action="{{ route('admin_action') }}" method="POST">
-                                                    {{ csrf_field() }}
-                                                    
-                                                    <input type = "hidden" value = 1 name = "token">
-                                                    <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                        <input type="submit" class="btn btn-success" value="Approve">
-                                                        
-                                                </form>
-
-                                                <form action="{{ route('admin_action') }}" method="POST">
-                                                    {{ csrf_field() }}
-                                                        <input type="hidden" value= 2 name = "token">
-                                                        <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                        <input type="submit" class="btn btn-danger" value="Reject">
-                                                </form>
-                                                
-                                                @elseif ($all_application->application_status == 1)
-                                            <form action="{{ route('admin_action') }}" method="POST">
-                                                {{ csrf_field() }}
-                                                    <input type="hidden" value= 2 name = "token">
-                                                    <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                    <input type="submit" class="btn btn-danger" value="Reject">
-                                            </form>
+                                                @elseif ($application->application_status == 1)
+                                                <td class="badge badge-success">Approved</td>
 
                                                 @else
-                                            <form action="{{ route('admin_action') }}" method="POST">
-                                                {{ csrf_field() }}
-                                                
-                                                <input type = "hidden" value = 1 name = "token">
-                                                <input type = "hidden" value = {{ $all_application->id }} name = "application_id">
-                                                    <input type="submit" class="btn btn-success" value="Approve">
-                                                    
-                                            </form>
+                                                <td class="badge badge-danger">Declined</td>
 
                                                 @endif
-                                            
-
-                                            </td>
+                                                <td>{{ $application->application_token }}</td>
+                                                
                                             </tr>
                                             @endforeach
                                             
                                             </tbody>
-                                            
                                         </table>
-                                        </div>
-                                        {{ $all_applications->links() }}
                                     </div>
                                 </div>
                             </div> <!-- end col -->
@@ -385,7 +338,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
-                                2019 © AnCounsel.
+                                2019 © Gabriel Akinyosoye.
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-right d-none d-sm-block">
@@ -436,13 +389,7 @@
                             </div>
                         </form>
 
-                        <h6 class="font-w
-                        <form class="p-3">
-                            <div class="form-group m-0">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="submit"><i class="mdi mdi-magneight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
+                        <h6 class="font-weight-medium px-4 mt-2 text-uppercase">Group Chats</h6>
 
                         <div class="p-2">
                             <a href="javascript: void(0);" class="text-reset notification-item pl-3 mb-2 d-block">
@@ -472,7 +419,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-10.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -487,7 +434,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-1.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -502,7 +449,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-9.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -521,7 +468,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-2.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -536,7 +483,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-4.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -551,7 +498,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -566,7 +513,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status online"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -581,7 +528,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-7.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status busy"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -596,7 +543,7 @@
                             <a href="javascript: void(0);" class="text-reset notification-item">
                                 <div class="media">
                                     <div class="position-relative mr-3">
-                                        <img src="/assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
+                                        <img src="assets/images/users/avatar-8.jpg" class="rounded-circle avatar-xs" alt="user-pic">
                                         <i class="mdi mdi-circle user-status away"></i>
                                     </div>
                                     <div class="media-body overflow-hidden">
@@ -723,58 +670,34 @@
         <div class="rightbar-overlay"></div>
 
         <!-- JAVASCRIPT -->
-        <script src="/assets/libs/jquery/jquery.min.js"></script>
-        <script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/libs/metismenu/metisMenu.min.js"></script>
-        <script src="/assets/libs/simplebar/simplebar.min.js"></script>
-        <script src="/assets/libs/node-waves/waves.min.js"></script>
+        <script src="assets/libs/jquery/jquery.min.js"></script>
+        <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+        <script src="assets/libs/simplebar/simplebar.min.js"></script>
+        <script src="assets/libs/node-waves/waves.min.js"></script>
 
         <!-- Required datatable js -->
-        <script src="/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-        <script src="/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
         <!-- Buttons examples -->
-        <script src="/assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-        <script src="/assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-        <script src="/assets/libs/jszip/jszip.min.js"></script>
-        <script src="/assets/libs/pdfmake/build/pdfmake.min.js"></script>
-        <script src="/assets/libs/pdfmake/build/vfs_fonts.js"></script>
-        <script src="/assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-        <script src="/assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-        <script src="/assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="assets/libs/jszip/jszip.min.js"></script>
+        <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+        <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
         <!-- Responsive examples -->
-        <script src="/assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-        <script src="/assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
 
         <!-- Datatable init js -->
-        <script src="/assets/js/pages/datatables.init.js"></script>
-
-        <!-- alertifyjs js -->
-        <script src="/assets/libs/alertifyjs/build/alertify.min.js"></script>
-
-        <script src="/assets/js/pages/alertifyjs.init.js"></script>
-
-
-        <script src="/assets/js/app.js"></script>
-        <script>
-
-        $(document).on('click','.pagination a', function(e){
-			e.preventDefault();
-			var page = $(this).attr('href').split('page=')[1];
-			// getProducts(page);
-			getProducts(page);
-		});
-        
-
-        function getProducts(page){
-			$.ajax({
-				url: '/admin/action?page=' + page
-			}).done(function(data){   
-				$('body').html(data);
-                
-			});
-		}
+        <script src="assets/js/pages/datatables.init.js"></script>
 
         
-        </script>
+
+        <script src="assets/js/app.js"></script>
+
     </body>
 </html>

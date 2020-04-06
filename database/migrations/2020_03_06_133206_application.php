@@ -19,6 +19,8 @@ class Application extends Migration
             $table->string('appointment_date');
             $table->mediumText('personal_message');
             $table->char('application_status')->default(0);
+            $table->string('counsellor');
+            $table->foreign('counsellor')->references('email')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +32,6 @@ class Application extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('applications');
     }
 }

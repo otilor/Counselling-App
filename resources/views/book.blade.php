@@ -29,7 +29,7 @@
                                             <div class="mt-4">
                                                 <button class="btn btn-success btn-block waves-effect waves-light" type="submit">Book Appointment</button>
                                             </div>
-                                            <div class="mt-4 text-center">
+                                            <div class="mt-4 text-center" id = "have">
                                                 <a href="/" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i>Have an Appointment?</a>
                                             </div>
                                         </div>
@@ -46,4 +46,5 @@
 <script>
     document.input_token.token.focus();
 </script>
+
 @endsection
