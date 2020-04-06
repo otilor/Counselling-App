@@ -9,6 +9,9 @@ use Illuminate\Support\Str;
 
 class ApplicationController extends Controller
 {
+    /**
+     * Chooses the counsellor to direct application to.
+     */
     protected function choose_counsellor()
     {
 
@@ -56,8 +59,10 @@ class ApplicationController extends Controller
         ]);
         
         $data = $request->only('appointment_date', 'personal_message', 'application_token');
+        // Chooses the counsellor...
         $counsellor = $this->choose_counsellor();
         $application_token = Str::random(8);
+
         Application::create([
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],

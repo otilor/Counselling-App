@@ -10,6 +10,6 @@ class Application extends Model
         'appointment_date',
         'application_token',
         'personal_message',
-        'counsellor'
+        'counsellor',
     ];
 }
