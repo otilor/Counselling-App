@@ -4,10 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use\App\Application;
+use App\User;
 use Illuminate\Support\Str;
 
 class ApplicationController extends Controller
 {
+    protected function choose_counsellor()
+    {
+
+        $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();      
+        // This algorithm randomises through all the counsellors and selects one.
+
+        $int = random_int(0, count($counsellors)-1);      
+
+        $counsellor = $counsellors[$int]["email"];
+
+        return $counsellor;
+    }
     
     public function index(){
         return view ('index');
@@ -35,18 +48,24 @@ class ApplicationController extends Controller
     }
 
     public function book_appointment(Request $request){
-        $message = $request->personal_message;
+        
 
         $request->validate([
             'appointment_date' => 'required|date',
             'personal_message' => 'required|max:255'
         ]);
-        $application = new Application;
-        $application->appointment_date = $request->appointment_date;
-        $application->personal_message = $request->personal_message;
-        $application->application_token = Str::random(8);
-        $application->save();
-        return redirect('/')->with('success','Use this token: '.$application->application_token);
+        
+        $data = $request->only('appointment_date', 'personal_message', 'application_token');
+        $counsellor = $this->choose_counsellor();
+        $application_token = Str::random(8);
+        Application::create([
+            'appointment_date' => $data["appointment_date"],
+            'personal_message' => $data["personal_message"],
+            'application_token' => $application_token,
+            'counsellor' => $counsellor,
+        ]);
+    
+        return redirect('/')->with('success','Use this token: '.$application_token);
     }
     //Send Email to applicatant
     public function send_email()
