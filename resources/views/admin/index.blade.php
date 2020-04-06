@@ -1,3 +1,1 @@
-Welcome {{ Auth::user()->name }}.
-
-You are Admin
+@extends('layouts.admin.app')
