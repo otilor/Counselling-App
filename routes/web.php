@@ -13,7 +13,15 @@ Route::post('/admin','AdminController@approve_application');
 Route::get('/profile','AdminController@admin_profile');
 Route::post('/profile','AdminController@update_profile');
 */
-Route::get('/admin', 'AdminController@index');
+// Route::get('/admin', 'AdminController@index');
+
+Route::group(['prefix' => 'super_admin'], function() {
+    Route::get('/', 'Super_Admin\Super_Admin_Controller@index')->name('super_admin');
+});
+
+
+
+Route::get('/admin', 'Admin\AdminController@index')->name('admin');
 Route::get('/admin/create', 'AdminController@create');
 Route::post('/admin/create','AdminController@create_profile');
 Route::get('/admin/pending', 'AdminController@pending_applications');

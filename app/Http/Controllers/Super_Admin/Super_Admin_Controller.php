@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 
 class Super_Admin_Controller extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('super_admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +18,7 @@ class Super_Admin_Controller extends Controller
      */
     public function index()
     {
-        //
+        return "Finally!";
     }
 
     /**

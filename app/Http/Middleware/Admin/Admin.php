@@ -3,6 +3,7 @@
 namespace App\Http\Middleware\Admin;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class Admin
 {
@@ -19,13 +20,14 @@ class Admin
             return redirect()->route('login');
         }
 
-        if(Auth::user()->role_id == 0){
-            return "Y";
+        if(Auth::user()->role_id == 1){
+            return $next($request);
         }
-        else
-        {
-            return "N";
-        }
-        return $next($request);
+
+        return redirect()->route('super_admin');
+
+        
+
+        // return redirect()->route('admin');
     }
 }
