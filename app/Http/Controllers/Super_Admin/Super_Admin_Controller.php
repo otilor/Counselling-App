@@ -11,14 +11,24 @@ class Super_Admin_Controller extends Controller
     {
         $this->middleware('super_admin');
     }
+
+    /**
+     * Gets all Applications for current admin
+     */
+    public function get_all_applications()
+    {
+        return Application::where('counsellor',Auth::id())->get();
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
-        return view('super_admin.index');
+        $all_applications = $this->get_all_applications();
+        return view('super_admin.index', compact('all_applications', $all_applications));
     }
 
     /**
