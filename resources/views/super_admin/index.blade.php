@@ -1,3 +1,3 @@
 Welcome {{ Auth::user()->name }}.
 
-You are Admin
+You are Root

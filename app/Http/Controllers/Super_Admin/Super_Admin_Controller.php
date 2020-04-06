@@ -18,7 +18,7 @@ class Super_Admin_Controller extends Controller
      */
     public function index()
     {
-        return "Finally!";
+        return view('super_admin.index');
     }
 
     /**
