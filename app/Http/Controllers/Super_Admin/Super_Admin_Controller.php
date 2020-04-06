@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Super_Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Application;
+use Illuminate\Support\Facades\Auth;
 
 class Super_Admin_Controller extends Controller
 {
@@ -17,7 +19,7 @@ class Super_Admin_Controller extends Controller
      */
     public function get_all_applications()
     {
-        return Application::where('counsellor',Auth::id())->get();
+        return Application::all();
     }
     /**
      * Display a listing of the resource.

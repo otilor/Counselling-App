@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Application;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -13,12 +15,21 @@ class AdminController extends Controller
     }
 
     /**
+     * Get all applications for the current counsellor
+     */
+    public function get_all_applications()
+    {
+        return Application::where('counsellor', Auth::user()->name)->get();
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+        $all_applications = $this->get_all_applications();
         return view('admin.index');
     }
 
