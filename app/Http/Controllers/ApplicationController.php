@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use\App\Application;
 use App\User;
+use App\Counsellor;
 use Illuminate\Support\Str;
 
 class ApplicationController extends Controller
@@ -18,16 +19,9 @@ class ApplicationController extends Controller
         $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();      
         // This algorithm randomises through all the counsellors and selects one.
 
-        // $int = random_int(0, count($counsellors)-1);      
+        $int = random_int(0, count($counsellors)-1);      
         
-        if (count($counsellors) <= 1)
-        {
-            $int = random_int(0, count($counsellors)-1);
-        }
-        
-        $int = count($counsellors) - random_int(0, count($counsellors)-1);
-        
-        
+       
 
         $counsellor = $counsellors[$int]["email"];
 
@@ -78,6 +72,11 @@ class ApplicationController extends Controller
             'application_token' => $application_token,
             'counsellor' => $counsellor,
         ]);
+        
+        Counsellor::create([
+            'email' => $counsellor,
+        ]);
+        
     
         return redirect('/')->with('success','Use this token: '.$application_token);
     }
