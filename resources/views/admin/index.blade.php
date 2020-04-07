@@ -6,7 +6,7 @@
 
     <div class="page-content">
         <div class="container-fluid">
-
+            
             <!-- start page title -->
             <div class="row">
                 <div class="col-12">
@@ -25,7 +25,9 @@
                 </div>
             </div>     
             <!-- end page title -->
-
+            @if (count($applications) < 1)
+            No Applications for you yet!
+            @else
             <div class="row">
                 <div class="col-xl-3">
                     <div class="card h-100">
@@ -133,6 +135,9 @@
                             <div class="tab-content pt-3">
                                 <div class="tab-pane active" id="custom-primary" role="tabpanel">
                                     <ul class="message-list mb-0">
+                                        
+                                        
+                                        
                                         @foreach ($applications as $application)
                                         <li class="unread">
                                             <div class="col-mail col-mail-1">
@@ -165,7 +170,6 @@
                                         @endforeach
                                         
 
-    
                                     </ul>
 
                                 </div>
@@ -684,6 +688,7 @@
                         <div class="col-7">
                             Showing 1 - 20 of {{ count($applications) }}
                         </div>
+                        
                         <div class="col-5">
                             <div class="btn-group float-right">
                                 <button type="button" class="btn btn-sm btn-success waves-effect"><i class="fa fa-chevron-left"></i></button>
@@ -693,8 +698,12 @@
                     </div>
                 </div>
             </div>
+            @endif
             <!-- end row -->
 
         </div> <!-- container-fluid -->
     </div>
+                                        
+                                        
+
 @endsection
