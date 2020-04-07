@@ -12,13 +12,22 @@ class ApplicationController extends Controller
     /**
      * Chooses the counsellor to direct application to.
      */
-    protected function choose_counsellor()
+    public function choose_counsellor()
     {
 
         $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();      
         // This algorithm randomises through all the counsellors and selects one.
 
-        $int = random_int(0, count($counsellors)-1);      
+        // $int = random_int(0, count($counsellors)-1);      
+        
+        if (count($counsellors) <= 1)
+        {
+            $int = random_int(0, count($counsellors)-1);
+        }
+        
+        $int = count($counsellors) - random_int(0, count($counsellors)-1);
+        
+        
 
         $counsellor = $counsellors[$int]["email"];
 
