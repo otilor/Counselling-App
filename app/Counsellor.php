@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Counsellor extends Model
 {
     protected $fillable = [
-        'email',
+        'counsellor',
+        'application_details',
     ];
 }
