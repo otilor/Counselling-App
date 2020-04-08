@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Application;
+use App\Counsellor;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -19,7 +19,7 @@ class AdminController extends Controller
      */
     public function get_all_applications()
     {
-        return Application::where('counsellor', Auth::user()->email)->get();
+        return Counsellor::where('counsellor', Auth::user()->email)->get();
     }
 
     /**
@@ -30,7 +30,9 @@ class AdminController extends Controller
     public function index()
     {
         $applications = $this->get_all_applications();
-        return view('admin.index', compact('applications',$applications));
+        
+        // dd($applications);
+        return view('admin.index', compact('applications'));
     }
 
     /**
