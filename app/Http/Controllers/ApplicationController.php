@@ -16,16 +16,28 @@ class ApplicationController extends Controller
     public function choose_counsellor()
     {
 
-        $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();      
-        // This algorithm randomises through all the counsellors and selects one.
-
-        $int = random_int(0, count($counsellors)-1);      
         
-       
+        // This algorithm randomises through all the counsellors and selects one.
+        
 
+        
+        $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();    
+        
+            $counte =  count($counsellors)-1;
+            try { 
+        $int = random_int(0, $counte); 
         $counsellor = $counsellors[$int]["email"];
 
-        return $counsellor;
+        return $counsellor;     
+        }   
+        catch (\Exception $e){
+            return "Failed!";
+        }   
+        // return back()->withErrors('No Counsellor for now');
+
+       
+
+        
     }
     
     public function index(){
@@ -65,7 +77,10 @@ class ApplicationController extends Controller
         // Chooses the counsellor...
         $counsellor = $this->choose_counsellor();
         $application_token = Str::random(8);
-
+        try{
+        
+        
+        
         Application::create([
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],
@@ -73,9 +88,20 @@ class ApplicationController extends Controller
             'counsellor' => $counsellor,
         ]);
         
+        $application = [
+
+            'appointment_date' => $data["appointment_date"],
+            'personal_message' => $data["personal_message"],
+        ];
+
+        $application_details = json_encode($application);
         Counsellor::create([
-            'email' => $counsellor,
+            'counsellor' => $counsellor,
+            'application_details' => $application_details,
         ]);
+    }catch(\Exception $exception){
+        return back()->withErrors($exception->getMessage());
+    }
         
     
         return redirect('/')->with('success','Use this token: '.$application_token);

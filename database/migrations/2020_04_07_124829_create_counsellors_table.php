@@ -15,8 +15,9 @@ class CreateCounsellorsTable extends Migration
     {
         Schema::create('counsellors', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email');
-            $table->foreign('email')->references('email')->on('users');
+            $table->string('counsellor');
+            $table->foreign('counsellor')->references('email')->on('users')->onUpdate('cascade')->onDelete('cascade');
+            $table->string('application_details');
             $table->timestamps();
         });
     }
