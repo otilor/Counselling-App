@@ -92,7 +92,7 @@ class ApplicationController extends Controller
 
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],
-            'token' => $application_token,
+            
         ];
 
         $application_details = $application;

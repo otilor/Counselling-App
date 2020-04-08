@@ -17,6 +17,8 @@ class CreateCounsellorsTable extends Migration
             $table->increments('id');
             $table->string('counsellor');
             $table->foreign('counsellor')->references('counsellor')->on('applications')->onUpdate('restrict')->onDelete('cascade');
+            $table->tinyInteger('status')->default(0);
+            $table->foreign('status')->references('application_status')->on('applications')->onUpdate('cascade')->onDelete('cascade');
             $table->json('application_details');
             $table->timestamps();
         });
