@@ -10,4 +10,8 @@ class Counsellor extends Model
         'counsellor',
         'application_details',
     ];
+
+    protected $casts = [
+        'application_details' => 'array',
+    ];
 }

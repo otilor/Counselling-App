@@ -11,13 +11,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-flex align-items-center justify-content-between">
-                        <h4 class="mb-0 font-size-18">Inbox</h4>
+                        <h4 class="mb-0 font-size-18">Applications</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Apaxy</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Email</a></li>
-                                <li class="breadcrumb-item active">Inbox</li>
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">AnCounsel</a></li>
+                                <li class="breadcrumb-item active">Applications</li>
                             </ol>
                         </div>
                         
@@ -32,26 +31,21 @@
                 <div class="col-xl-3">
                     <div class="card h-100">
                         <div class="card-body email-leftbar">
-                            <a href="email-compose.html" class="btn btn-danger btn-block btn-rounded waves-effect waves-light"><i class="mdi mdi-plus mr-1"></i> Compose</a>
-
+                            <!--
+                            <a href="#" class="btn btn-danger btn-block btn-rounded waves-effect waves-light"><i class="mdi mdi-plus mr-1"></i> Compose</a>
+                            -->
                             <div class="mail-list mt-4">
-                                <a href="#" class="active"><i class="mdi mdi-inbox mr-2"></i> Inbox <span class="ml-1 float-right">({{ count($applications) }})</span></a>
-                                <a href="#"><i class="mdi mdi-star-outline mr-2"></i>Starred</a>
-                                <a href="#"><i class="mdi mdi-diamond-stone mr-2"></i>Important</a>
-                                <a href="#"><i class="mdi mdi-file-outline mr-2"></i>Draft</a>
-                                <a href="#"><i class="mdi mdi-send-check-outline mr-2"></i>Sent Mail</a>
-                                <a href="#"><i class="mdi mdi-trash-can-outline mr-2"></i>Trash</a>
+                                <a href="#" class="active"><i class="mdi mdi-inbox mr-2"></i> Applications <span class="ml-1 float-right">({{ count($applications) }})</span></a>
                             </div>
 
                             <div>
                                 <h6 class="mt-4">Labels</h6>
 
                                 <div class="mail-list mt-1">
-                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-info"></span>Theme Support</a>
-                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-warning"></span>Freelance</a>
-                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-primary"></span>Social</a>
-                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-danger"></span>Friends</a>
-                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-success"></span>Family</a>
+                                    
+                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-warning"></span>Pending</a>
+                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-danger"></span>Rejected</a>
+                                    <a href="#"><span class="mdi mdi-circle-outline mr-2 text-success"></span>Accepted</a>
                                 </div>
                             </div>
                         </div>
@@ -71,11 +65,15 @@
                                     <button type="button" class="btn btn-primary waves-light waves-effect dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-folder"></i> <i class="mdi mdi-chevron-down ml-1"></i>
                                     </button>
+                                    <!--                                                                                                        
+                                        Folder Dropdown
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item" href="#">Updates</a>
                                         <a class="dropdown-item" href="#">Social</a>
                                         <a class="dropdown-item" href="#">Team Manage</a>
                                     </div>
+
+                                -->
                                 </div>
                             </div>
                         </div>
@@ -85,17 +83,20 @@
                                     <button type="button" class="btn btn-primary waves-light waves-effect dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-tag"></i> <i class="mdi mdi-chevron-down ml-1"></i>
                                     </button>
+                                    <!-- Label Button
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a class="dropdown-item" href="#">Updates</a>
                                         <a class="dropdown-item" href="#">Social</a>
                                         <a class="dropdown-item" href="#">Team Manage</a>
                                     </div>
+                                 End Label button-->
                                 </div>
 
                                 <div class="btn-group ml-2 mb-3">
                                     <button type="button" class="btn btn-primary waves-light waves-effect dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                         More <i class="mdi mdi-dots-vertical ml-1"></i>
                                     </button>
+                                    <!-- More dropdown
                                     <div class="dropdown-menu dropdown-menu-right">
                                         <a class="dropdown-item" href="#">Mark as Unread</a>
                                         <a class="dropdown-item" href="#">Mark as Important</a>
@@ -103,6 +104,7 @@
                                         <a class="dropdown-item" href="#">Add Star</a>
                                         <a class="dropdown-item" href="#">Mute</a>
                                     </div>
+                                End more dropdown-->
                                 </div>
                             </div>
                         </div>
@@ -151,10 +153,10 @@
                                             </div>
                                             <div class="col-mail col-mail-2">
                                             <a href="#" class="subject">
-                                                @if ($application->application_status == 0)
+                                                @if ($application->status == 0)
                                                 <span class="badge-info badge mr-2">Pending</span>
 
-                                                @elseif ($application->application_status == 1)
+                                                @elseif ($application->status == 1)
                                                 <span class="badge-success badge mr-2">Accepted</span>
 
                                                 @else
@@ -162,9 +164,12 @@
                                                 @endif
 
 
-                                                <span class="teaser">{{ $application->personal_message }}</span>
+                                                <span class="teaser">{{ $application->application_details["personal_message"] }}</span>
                                                 </a>
-                                            <div class="date">{{ $application->appointment_date }}</div>
+
+                                            
+                                            <div class="date">{{ $application->application_details["appointment_date"] }}</div>
+                                            
                                             </div>
                                         </li>
                                         @endforeach
@@ -646,7 +651,7 @@
                                             </div>
                                             <div class="col-mail col-mail-2">
                                                 <a href="#" class="subject">
-                                                    @if($application->application_status == 0)
+                                                    @if($application->application_details == 0)
                                                     <span class="badge-info badge mr-2">Pending</span>
                                                     @endif
                                                     Home again! – <span class="teaser">That's just perfect! See you tomorrow.</span>

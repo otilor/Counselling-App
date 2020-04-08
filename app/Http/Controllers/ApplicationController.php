@@ -58,7 +58,7 @@ class ApplicationController extends Controller
         if(!$applications){
             return back()->with('error','No Application attached to this token'.$applications);
         }
-        return view('status', compact('applications',$applications));
+        return view('status', compact('applications'));
         
     }
     public function book(){
@@ -92,9 +92,10 @@ class ApplicationController extends Controller
 
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],
+            
         ];
 
-        $application_details = json_encode($application);
+        $application_details = $application;
         Counsellor::create([
             'counsellor' => $counsellor,
             'application_details' => $application_details,
