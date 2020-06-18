@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Application;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Counsellor;
@@ -32,9 +34,9 @@ class AdminController extends Controller
         // $applications = $this->get_all_applications();
         
         // dd($applications);
-        $applications = new Counsellor;
-        dd($applications->find(1));
-        return view('admin.index', compact('counsellor'));
+        $applications = User::find(Auth::id())->applications;
+        dd($applications);
+        // return view('admin.index', compact('applications'));
     }
 
     /**
