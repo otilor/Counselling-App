@@ -11,6 +11,7 @@ class Application extends Model
         'application_token',
         'personal_message',
         'counsellor',
+        'counsellor_id',
         'application_status',
     ];
 }

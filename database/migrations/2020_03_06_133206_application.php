@@ -19,10 +19,10 @@ class Application extends Migration
             $table->string('appointment_date');
             $table->mediumText('personal_message');
             $table->tinyInteger('application_status')->index()->default(0);
-            $table->string('counsellor');
+            $table->unsignedBigInteger('counsellor_id');
             $table->timestamps();
 
-            // $table->foreign('counsellor')->references('email')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('counsellor_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

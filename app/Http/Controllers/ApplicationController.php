@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use\App\Application;
 use App\User;
-use App\Counsellor;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class ApplicationController extends Controller
@@ -21,14 +21,12 @@ class ApplicationController extends Controller
         
 
         
-        $counsellors = User::select('email')->where('role_id', 1)->get()->toArray();    
+        $counsellors = User::select('id')->where('role_id', 1)->get()->toArray();
         
             $counte =  count($counsellors)-1;
             try { 
         $int = random_int(0, $counte);
-        $counsellor = $counsellors[$int]["email"];
-
-        return $counsellor;     
+                return $counsellors[$int]["id"];
         }   
         catch (\Exception $e){
             return "Failed!";
@@ -73,7 +71,7 @@ class ApplicationController extends Controller
         
         $data = $request->only('appointment_date', 'personal_message', 'application_token');
         // Chooses the counsellor...
-        $counsellor = $this->choose_counsellor();
+        $counsellor_id = $this->choose_counsellor();
         $application_token = Str::random(8);
         try{
         
@@ -83,7 +81,7 @@ class ApplicationController extends Controller
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],
             'application_token' => $application_token,
-            'counsellor' => $counsellor,
+            'counsellor_id' => $counsellor_id,
         ]);
         
         $application = [
@@ -94,10 +92,7 @@ class ApplicationController extends Controller
         ];
 
         $application_details = $application;
-        Counsellor::create([
-            'counsellor' => $counsellor,
-            'application_details' => $application_details,
-        ]);
+
     }catch(\Exception $exception){
         return back()->withErrors($exception->getMessage());
     }
@@ -105,7 +100,7 @@ class ApplicationController extends Controller
     
         return redirect('/')->with('success','Use this token: '.$application_token);
     }
-    //Send Email to applicatant
+    //Send Email to applicant
     public function send_email()
     {
         return view('email');
