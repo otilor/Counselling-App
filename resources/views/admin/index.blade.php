@@ -164,7 +164,7 @@
                                                 @endif
 
 
-                                                <span class="teaser">{{ $application->application_details["personal_message"] }}</span>
+                                                <span class="teaser">{{ $application->personal_message }}</span>
                                                 </a>
 
                                             
