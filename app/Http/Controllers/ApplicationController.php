@@ -22,15 +22,19 @@ class ApplicationController extends Controller
 
         
         $counsellors = User::select('id')->where('role_id', 1)->get()->toArray();
-        
+        if  (count($counsellors) <= 0 ) {
+            return null;
+        } else {
             $counte =  count($counsellors)-1;
-            try { 
-        $int = random_int(0, $counte);
+            try {
+                $int = random_int(0, $counte);
                 return $counsellors[$int]["id"];
-        }   
-        catch (\Exception $e){
-            return "Failed!";
-        }   
+            }
+            catch (\Exception $e){
+                return "Failed!";
+            }
+        }
+
         // return back()->withErrors('No Counsellor for now');
 
        
@@ -72,11 +76,14 @@ class ApplicationController extends Controller
         $data = $request->only('appointment_date', 'personal_message', 'application_token');
         // Chooses the counsellor...
         $counsellor_id = $this->choose_counsellor();
+        if (is_null($counsellor_id)) {
+            return back()->withErrors("No counsellors for now!");
+        }
         $application_token = Str::random(8);
         try{
         
         
-        
+
         Application::create([
             'appointment_date' => $data["appointment_date"],
             'personal_message' => $data["personal_message"],
