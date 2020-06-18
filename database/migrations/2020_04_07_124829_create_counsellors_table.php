@@ -14,13 +14,13 @@ class CreateCounsellorsTable extends Migration
     public function up()
     {
         Schema::create('counsellors', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('counsellor');
-            $table->foreign('counsellor')->references('counsellor')->on('applications')->onUpdate('restrict')->onDelete('cascade');
-            $table->tinyInteger('status')->default(0);
-            $table->foreign('status')->references('application_status')->on('applications')->onUpdate('cascade')->onDelete('cascade');
             $table->json('application_details');
+            $table->unsignedBigInteger('counsellor_id');
             $table->timestamps();
+
+            $table->foreign('counsellor_id')->references('id')->on('users');
         });
     }
 

@@ -168,7 +168,7 @@
                                                 </a>
 
                                             
-                                            <div class="date">{{ $application->application_details["appointment_date"] }}</div>
+                                            <div class="date"></div>
                                             
                                             </div>
                                         </li>

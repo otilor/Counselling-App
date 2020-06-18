@@ -20,8 +20,9 @@ class Application extends Migration
             $table->mediumText('personal_message');
             $table->tinyInteger('application_status')->index()->default(0);
             $table->string('counsellor');
-            $table->foreign('counsellor')->references('email')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
+
+            // $table->foreign('counsellor')->references('email')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

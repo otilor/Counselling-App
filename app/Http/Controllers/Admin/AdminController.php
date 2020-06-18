@@ -25,14 +25,16 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View
      */
     public function index()
     {
-        $applications = $this->get_all_applications();
+        // $applications = $this->get_all_applications();
         
         // dd($applications);
-        return view('admin.index', compact('applications'));
+        $applications = new Counsellor;
+        dd($applications->find(1));
+        return view('admin.index', compact('counsellor'));
     }
 
     /**
