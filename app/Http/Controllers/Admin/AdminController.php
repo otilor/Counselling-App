@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Application;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Counsellor;
@@ -25,13 +27,15 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View
      */
     public function index()
     {
-        $applications = $this->get_all_applications();
+        // $applications = $this->get_all_applications();
         
         // dd($applications);
+        $applications = User::find(Auth::id())->applications;
+
         return view('admin.index', compact('applications'));
     }
 

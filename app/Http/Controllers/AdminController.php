@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Application;
+use App\Counsellor;
 use App\User;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\View\View;
 
 class AdminController extends Controller
 {
@@ -12,32 +16,32 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|\Illuminate\Foundation\Application|View
      */
     public function index()
     {
-        $applications = Application::all();
-        //return response()->json($applications);
-        return view('admin.index', compact('applications', $applications));
+        $counsellor = new Counsellor;
+        dd($counsellor);
+        return view('admin.index')->with('counsellor', $counsellor);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|\Illuminate\Foundation\Application|View
      */
     public function create()
     {
-        //Create an admin account
         return view('admin.profile');
     }
 
     public function pending_applications()
     {
-        $pending_applications = Application::where('application_status',0)->orderBy('created_at','desc')->get();
+        $pending_applications = Application::where('application_status', 0)->orderBy('created_at', 'desc')->get();
         //return response()->json($pending_applications);
         return view('admin.pending', compact('pending_applications', $pending_applications));
     }
@@ -45,8 +49,8 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -56,8 +60,8 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
     public function show($id)
     {
@@ -67,8 +71,8 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
     public function edit($id)
     {
@@ -78,44 +82,44 @@ class AdminController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return Response
      */
     public function update(Request $request)
     {
         //Set application status for Application
-        $token =  $request->get('token');
+        $token = $request->get('token');
         $application_id = $request->get('application_id');
-        $update_application = Application::where('id',$application_id)->first();
-        //return response()->json($application);
+
+        $update_application = Application::where('id', $application_id)->first();
         $update_application->application_status = $token;
         $update_application->save();
-        
-        
-        if ($token == 1)
-        {
-            return back()->with('success','Application Approved!');
+
+        $this->processToken($token);
+
+    }
+
+    public function processToken(int $token)
+    {
+        if ($token == 1) {
+            return back()->with('success', 'Application Approved!');
+        } else {
+            return back()->with('success', 'Application Rejected!');
         }
 
-        else
-        {
-            return back()->with('success','Application Rejected!');
-        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return Response
      */
     public function destroy($id)
     {
         //
     }
 
-   
 
     public function create_profile(Request $request)
     {
@@ -132,7 +136,7 @@ class AdminController extends Controller
         $new_admin_account->password = bcrypt($request->password);
         $new_admin_account->remember_token = sha1($request->_token);
         $new_admin_account->save();
-        return redirect()->back()->with('success','Admin User Created!');
+        return redirect()->back()->with('success', 'Admin User Created!');
     }
 
 
@@ -141,7 +145,6 @@ class AdminController extends Controller
         $all_applications = Application::paginate(15);
         return view('admin.action', compact('all_applications', $all_applications));
     }
-    
 
-    
+
 }

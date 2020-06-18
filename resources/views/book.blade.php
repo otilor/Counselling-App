@@ -32,6 +32,8 @@
                                             <div class="mt-4 text-center" id = "have">
                                                 <a href="/" class="text-muted"><i class="mdi mdi-calendar-blank-multiple "></i>Have an Appointment?</a>
                                             </div>
+
+                                            <div class="mt-4 no-gutters text-center"><a href="/" class="btn btn-dark">Go back</a></div>
                                         </div>
                                     </div>
                                 </form>
