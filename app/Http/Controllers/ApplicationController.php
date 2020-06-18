@@ -25,7 +25,7 @@ class ApplicationController extends Controller
         
             $counte =  count($counsellors)-1;
             try { 
-        $int = random_int(0, $counte); 
+        $int = random_int(0, $counte);
         $counsellor = $counsellors[$int]["email"];
 
         return $counsellor;     
@@ -43,9 +43,7 @@ class ApplicationController extends Controller
     public function index(){
         return view ('index');
     }
-    public function show_status (){
-        return view('status');
-    }
+
 
     public function check_token(Request $request){
        
