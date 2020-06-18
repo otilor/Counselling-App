@@ -21,7 +21,8 @@ class ApplicationsTableSeeder extends Seeder
         DB::table('applications')->insert([
             'appointment_date' => "2020-02-29",
             'personal_message' => "I am broke and I need help.",
-            'counsellor' => $counsellor,
+            'counsellor' => "gabrielfemi799@gmail.com",
+            'application_token' => Str::random(10)
         ]);
         
     }

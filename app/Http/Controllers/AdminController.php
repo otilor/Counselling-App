@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use App\Application;
 use App\User;
+use Illuminate\View\View;
 
 class AdminController extends Controller
 {
@@ -15,23 +17,21 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|\Illuminate\Foundation\Application|View
      */
     public function index()
     {
         $applications = Application::all();
-        //return response()->json($applications);
         return view('admin.index', compact('applications', $applications));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|\Illuminate\Foundation\Application|View
      */
     public function create()
     {
-        //Create an admin account
         return view('admin.profile');
     }
 
@@ -79,7 +79,7 @@ class AdminController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
@@ -87,12 +87,16 @@ class AdminController extends Controller
         //Set application status for Application
         $token =  $request->get('token');
         $application_id = $request->get('application_id');
+
         $update_application = Application::where('id',$application_id)->first();
-        //return response()->json($application);
         $update_application->application_status = $token;
         $update_application->save();
-        
-        
+
+        $this->processToken($token);
+
+    }
+
+    public function processToken(int $token) {
         if ($token == 1)
         {
             return back()->with('success','Application Approved!');
@@ -102,8 +106,8 @@ class AdminController extends Controller
         {
             return back()->with('success','Application Rejected!');
         }
-    }
 
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -115,7 +119,7 @@ class AdminController extends Controller
         //
     }
 
-   
+
 
     public function create_profile(Request $request)
     {
@@ -141,7 +145,7 @@ class AdminController extends Controller
         $all_applications = Application::paginate(15);
         return view('admin.action', compact('all_applications', $all_applications));
     }
-    
 
-    
+
+
 }
