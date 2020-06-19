@@ -27,13 +27,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-        $applications = User::find(Auth::id())->applications;
-
         
-
-        
-        // dd($applications);
         $applications = User::find(Auth::id())->applications;
 
         return view('admin.index', compact('applications'));
