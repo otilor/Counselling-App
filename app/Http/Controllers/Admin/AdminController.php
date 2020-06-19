@@ -20,10 +20,6 @@ class AdminController extends Controller
      * Get all applications for the current counsellor
      */
 
-    public function counsellorDetails () {
-        return Auth::user();
-    }
-
     /**
      * Display a listing of the resource.
      *
