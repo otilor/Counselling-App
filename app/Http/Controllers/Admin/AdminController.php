@@ -19,10 +19,6 @@ class AdminController extends Controller
     /**
      * Get all applications for the current counsellor
      */
-    public function get_all_applications()
-    {
-        return Counsellor::where('counsellor', Auth::user()->email)->get();
-    }
 
     /**
      * Display a listing of the resource.
@@ -31,9 +27,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        // $applications = $this->get_all_applications();
         
-        // dd($applications);
         $applications = User::find(Auth::id())->applications;
 
         return view('admin.index', compact('applications'));
