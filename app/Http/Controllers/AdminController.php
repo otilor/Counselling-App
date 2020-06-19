@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Application;
+use App\Counsellor;
 use App\User;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
@@ -23,8 +24,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $applications = Application::all();
-        return view('admin.index', compact('applications', $applications));
+        $counsellor = new Counsellor;
+        dd($counsellor);
+        return view('admin.index')->with('counsellor', $counsellor);
     }
 
     /**

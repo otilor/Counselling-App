@@ -153,10 +153,10 @@
                                             </div>
                                             <div class="col-mail col-mail-2">
                                             <a href="#" class="subject">
-                                                @if ($application->status == 0)
+                                                @if ($application->application_status == 0)
                                                 <span class="badge-info badge mr-2">Pending</span>
 
-                                                @elseif ($application->status == 1)
+                                                @elseif ($application->application_status == 1)
                                                 <span class="badge-success badge mr-2">Accepted</span>
 
                                                 @else
@@ -164,11 +164,11 @@
                                                 @endif
 
 
-                                                <span class="teaser">{{ $application->application_details["personal_message"] }}</span>
+                                                <span class="teaser">{{ $application->personal_message }}</span>
                                                 </a>
 
                                             
-                                            <div class="date">{{ $application->application_details["appointment_date"] }}</div>
+                                            <div class="date"></div>
                                             
                                             </div>
                                         </li>

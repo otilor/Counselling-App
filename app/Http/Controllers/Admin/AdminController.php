@@ -23,13 +23,19 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\View\View
      */
     public function index()
     {
+
         $applications = User::find(Auth::id())->applications;
+
+        
+
         
         // dd($applications);
+        $applications = User::find(Auth::id())->applications;
+
         return view('admin.index', compact('applications'));
     }
 

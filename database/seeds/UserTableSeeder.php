@@ -5,7 +5,7 @@ use App\User;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
 
-class AdminSeeder extends Seeder
+class UserTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
