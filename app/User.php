@@ -9,7 +9,7 @@ class User extends Authenticatable
 {
 
     public function applications () {
-        return $this->hasMany('App\Application');
+        return $this->hasMany('App\Application', 'counsellor_id');
     }
     use Notifiable;
 
