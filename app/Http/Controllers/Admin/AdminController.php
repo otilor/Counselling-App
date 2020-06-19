@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Application;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Counsellor;
@@ -19,7 +21,11 @@ class AdminController extends Controller
      */
     public function get_all_applications()
     {
-        return Counsellor::where('counsellor', Auth::user()->email)->get();
+        // return Counsellor::where('counsellor', Auth::user()->email)->get();
+    }
+
+    public function counsellorDetails () {
+        return Auth::user();
     }
 
     /**
